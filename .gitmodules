@@ -1,0 +1,3 @@
+[submodule "Fantline/Fantasy"]
+	path = Fantline/Fantasy
+	url = https://github.com/liseami/FantasyUI.git

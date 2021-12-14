@@ -1,0 +1,6 @@
+framework module Pods_Fantline {
+  umbrella header "Pods-Fantline-umbrella.h"
+
+  export *
+  module * { export * }
+}

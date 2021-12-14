@@ -1,0 +1,48 @@
+PODS:
+  - CropViewController (2.6.0)
+  - FantasyUI (1.0.10)
+  - FloatingPanel (2.5.1)
+  - Introspect (0.1.3)
+  - lottie-ios (3.2.3)
+  - UMCCommonLog (2.0.2)
+  - UMCommon (7.3.5):
+    - UMDevice
+  - UMDevice (2.0.5)
+
+DEPENDENCIES:
+  - CropViewController
+  - FantasyUI (from `./Fantasy`)
+  - FloatingPanel
+  - Introspect
+  - lottie-ios
+  - UMCCommonLog
+  - UMCommon
+  - UMDevice
+
+SPEC REPOS:
+  trunk:
+    - CropViewController
+    - FloatingPanel
+    - Introspect
+    - lottie-ios
+    - UMCCommonLog
+    - UMCommon
+    - UMDevice
+
+EXTERNAL SOURCES:
+  FantasyUI:
+    :path: "./Fantasy"
+
+SPEC CHECKSUMS:
+  CropViewController: 7093b39ec3cb508531b22d35773e06cecd7378d8
+  FantasyUI: 9ebd784a1a1bed6c324278373e5e577e33ef94f6
+  FloatingPanel: 523cb50f490f151fc03fabf24a8322e44d22f65f
+  Introspect: 2be020f30f084ada52bb4387fff83fa52c5c400e
+  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
+  UMCCommonLog: bea707e50c85cef4b0eb47cc5c7226bb843245ca
+  UMCommon: ab4d875ddefe1b06c60b577e4a58bc4d433ee067
+  UMDevice: c13bbb2e8ca6c67d1e23e03162553e3ec5a8b5b0
+
+PODFILE CHECKSUM: df6eaa93d0dd1fe6d8c8ecbc1e35b373684da7af
+
+COCOAPODS: 1.11.2
