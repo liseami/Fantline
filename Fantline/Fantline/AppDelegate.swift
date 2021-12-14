@@ -21,7 +21,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 //        //AppleStore初始化
 //        AppStore_init()
 //        //UI调整
-//        Customappearance()
+        Customappearance()
 //
 //        //初次登陆检查
 //        LaunchManager.shared.firstLaunchTest()

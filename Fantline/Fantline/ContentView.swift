@@ -11,63 +11,46 @@ import CoreData
 struct ContentView: View {
     
     @Environment(\.managedObjectContext) private var viewContext
-    @State var appIndex : appPageTag = .Find
-    
-    enum appPageTag {
-        case Find
-        case Libray
-        case Search
-    }
+    @ObservedObject var uistate = UIState.share
     
     var body: some View {
         
-        NavigationView {
-            TabView(selection: $appIndex) {
-                FindView()
-                    .tabItem {
-                        ICON(sysname: "location")
-                        Text("发现").tag(appPageTag.Find)
-                    }
-                
-                LibrayView()
-                    .tabItem {
-                        ICON(sysname: "list.and.film")
-                        Text("资料库").tag(appPageTag.Libray)
-                    }
-             
-                
-                SearchView()
-                    .tabItem {
-                        ICON(sysname: "magnifyingglass")
-                        Text("搜索").tag(appPageTag.Search)
-                    }
-                
-                Text("创作")
-                    .tabItem {
-                        ICON(sysname: "highlighter")
-                        Text("创作").tag(3)
-                    }
-            }
-            .tabViewStyle(.automatic)
-            .navigationTitle(Text(getNavigationTitle()))
       
+        NavigationView {
+            
+            ZStack{
+                
+                Color.BackGround.ignoresSafeArea()
+                
+                switch uistate.appIndex {
+                    
+                case .Find:
+                    FindView()
+                    
+                case .Libray:
+                    LibrayView()
+                     
+                    
+                case .Search:
+                    SearchView()
+                    
+                }
+                
+                Tabbar()
+                
+            }
+            .PF_Navilink(isPresented: $uistate.showLaperView) {
+                LaperView()
+            }
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .accentColor(.orange)
+        .accentColor(.accentColor)
+        .preferredColorScheme(uistate.showLaperView ? .dark : .light)
    
       
     }
     
-    func getNavigationTitle() -> String{
-        switch appIndex {
-        case .Find:
-            return "发现"
-        case .Libray:
-            return "资料库"
-        case .Search:
-            return "创作"
-        }
-    }
+   
 
 }
 
