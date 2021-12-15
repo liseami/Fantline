@@ -14,7 +14,7 @@
 		5A300B93274FD0B300587B2C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A300B92274FD0B300587B2C /* Preview Assets.xcassets */; };
 		5A300B95274FD0B300587B2C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A300B94274FD0B300587B2C /* Persistence.swift */; };
 		5A300B98274FD0B300587B2C /* Fantline.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A300B96274FD0B300587B2C /* Fantline.xcdatamodeld */; };
-		5A6E0530276846CA000BF8A1 /* Bridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E052F276846CA000BF8A1 /* Bridge.m */; };
+		5A6E0530276846CA000BF8A1 /* Fantline-Bridging-Header.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E052F276846CA000BF8A1 /* Fantline-Bridging-Header.m */; };
 		5A6E053227684746000BF8A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E053127684746000BF8A1 /* AppDelegate.swift */; };
 		5A6E053C276847A8000BF8A1 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E0539276847A8000BF8A1 /* Font.swift */; };
 		5A6E054027684B64000BF8A1 /* FindView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E053F27684B64000BF8A1 /* FindView.swift */; };
@@ -43,13 +43,13 @@
 		5A6E0572276873E0000BF8A1 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A6E055F276873E0000BF8A1 /* Montserrat-Italic.ttf */; };
 		5A6E0573276873E0000BF8A1 /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A6E0560276873E0000BF8A1 /* Montserrat-SemiBoldItalic.ttf */; };
 		5A6E0574276873E0000BF8A1 /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A6E0561276873E0000BF8A1 /* Montserrat-ExtraBoldItalic.ttf */; };
-		5A6E0578276874D7000BF8A1 /* FloderComps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E0577276874D7000BF8A1 /* FloderComps.swift */; };
 		5A6E057B27688082000BF8A1 /* DefultStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E057A27688082000BF8A1 /* DefultStore.swift */; };
 		5A6E057E2768830A000BF8A1 /* PublicFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E057D2768830A000BF8A1 /* PublicFuncs.swift */; };
 		5A6E05802768844B000BF8A1 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E057F2768844B000BF8A1 /* String+.swift */; };
 		5A6E05832768878E000BF8A1 /* LaperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E05822768878E000BF8A1 /* LaperView.swift */; };
 		5A6E058527688B91000BF8A1 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E058427688B91000BF8A1 /* PieChart.swift */; };
 		6A2FE94116067F12231EB9B9 /* Pods_Fantline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FBB74C617C22AAC2AD4ED2F /* Pods_Fantline.framework */; };
+		A24FB3222769D8AA00BC752B /* FloderComps.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24FB3212769D8AA00BC752B /* FloderComps.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,7 +63,7 @@
 		5A300B94274FD0B300587B2C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		5A300B97274FD0B300587B2C /* Fantline.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fantline.xcdatamodel; sourceTree = "<group>"; };
 		5A6E052E276846CA000BF8A1 /* Fantline-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fantline-Bridging-Header.h"; sourceTree = "<group>"; };
-		5A6E052F276846CA000BF8A1 /* Bridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bridge.m; sourceTree = "<group>"; };
+		5A6E052F276846CA000BF8A1 /* Fantline-Bridging-Header.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Fantline-Bridging-Header.m"; sourceTree = "<group>"; };
 		5A6E053127684746000BF8A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A6E0539276847A8000BF8A1 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		5A6E053F27684B64000BF8A1 /* FindView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindView.swift; sourceTree = "<group>"; };
@@ -92,14 +92,13 @@
 		5A6E055F276873E0000BF8A1 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
 		5A6E0560276873E0000BF8A1 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		5A6E0561276873E0000BF8A1 /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
-		5A6E057527687406000BF8A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		5A6E0577276874D7000BF8A1 /* FloderComps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloderComps.swift; sourceTree = "<group>"; };
 		5A6E057A27688082000BF8A1 /* DefultStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefultStore.swift; sourceTree = "<group>"; };
 		5A6E057D2768830A000BF8A1 /* PublicFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicFuncs.swift; sourceTree = "<group>"; };
 		5A6E057F2768844B000BF8A1 /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		5A6E05822768878E000BF8A1 /* LaperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaperView.swift; sourceTree = "<group>"; };
 		5A6E058427688B91000BF8A1 /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
 		675ACC36DAAF3F9A01C31F1C /* Pods-Fantline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fantline.release.xcconfig"; path = "Target Support Files/Pods-Fantline/Pods-Fantline.release.xcconfig"; sourceTree = "<group>"; };
+		A24FB3212769D8AA00BC752B /* FloderComps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloderComps.swift; sourceTree = "<group>"; };
 		E227FFFA0BCD629747AA9A50 /* Pods-Fantline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fantline.debug.xcconfig"; path = "Target Support Files/Pods-Fantline/Pods-Fantline.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,18 +151,15 @@
 		5A300B8A274FD0B200587B2C /* Fantline */ = {
 			isa = PBXGroup;
 			children = (
-				5A2ECD7C27697AC900792E80 /* Player */,
-				5A6E057527687406000BF8A1 /* Info.plist */,
+				5A6E052E276846CA000BF8A1 /* Fantline-Bridging-Header.h */,
+				5A6E052F276846CA000BF8A1 /* Fantline-Bridging-Header.m */,
 				5A300B8B274FD0B200587B2C /* FantlineApp.swift */,
 				5A6E057A27688082000BF8A1 /* DefultStore.swift */,
 				5A6E053127684746000BF8A1 /* AppDelegate.swift */,
 				5A300B8D274FD0B200587B2C /* ContentView.swift */,
-				5A6E052E276846CA000BF8A1 /* Fantline-Bridging-Header.h */,
-				5A6E052F276846CA000BF8A1 /* Bridge.m */,
 				5A300B8F274FD0B300587B2C /* Assets.xcassets */,
-				5A6E053E27684B4C000BF8A1 /* TabMainViews */,
-				5A6E0576276874C9000BF8A1 /* Floder */,
-				5A6E05812768877F000BF8A1 /* LaperView */,
+				A24FB3232769D8C700BC752B /* Views */,
+				5A2ECD7C27697AC900792E80 /* Player */,
 				5A6E054727685F3A000BF8A1 /* UI */,
 				5A6E057C276882FF000BF8A1 /* Tools */,
 				5A6E057927688063000BF8A1 /* CoreData */,
@@ -237,14 +233,6 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
-		5A6E0576276874C9000BF8A1 /* Floder */ = {
-			isa = PBXGroup;
-			children = (
-				5A6E0577276874D7000BF8A1 /* FloderComps.swift */,
-			);
-			path = Floder;
-			sourceTree = "<group>";
-		};
 		5A6E057927688063000BF8A1 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +258,24 @@
 				5A6E058427688B91000BF8A1 /* PieChart.swift */,
 			);
 			path = LaperView;
+			sourceTree = "<group>";
+		};
+		A24FB3202769D71200BC752B /* Floder */ = {
+			isa = PBXGroup;
+			children = (
+				A24FB3212769D8AA00BC752B /* FloderComps.swift */,
+			);
+			path = Floder;
+			sourceTree = "<group>";
+		};
+		A24FB3232769D8C700BC752B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5A6E053E27684B4C000BF8A1 /* TabMainViews */,
+				5A6E05812768877F000BF8A1 /* LaperView */,
+				A24FB3202769D71200BC752B /* Floder */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		EA60E0B704135E051404AB8E /* Pods */ = {
@@ -443,12 +449,12 @@
 				5A6E057E2768830A000BF8A1 /* PublicFuncs.swift in Sources */,
 				5A6E054027684B64000BF8A1 /* FindView.swift in Sources */,
 				5A6E058527688B91000BF8A1 /* PieChart.swift in Sources */,
-				5A6E0530276846CA000BF8A1 /* Bridge.m in Sources */,
+				5A6E0530276846CA000BF8A1 /* Fantline-Bridging-Header.m in Sources */,
 				5A6E05832768878E000BF8A1 /* LaperView.swift in Sources */,
 				5A6E05802768844B000BF8A1 /* String+.swift in Sources */,
 				5A6E054227684B90000BF8A1 /* LibrayView.swift in Sources */,
+				A24FB3222769D8AA00BC752B /* FloderComps.swift in Sources */,
 				5A2ECD7E27697AD600792E80 /* VideoPlayer.swift in Sources */,
-				5A6E0578276874D7000BF8A1 /* FloderComps.swift in Sources */,
 				5A6E054D276862A0000BF8A1 /* Comps.swift in Sources */,
 				5A300B98274FD0B300587B2C /* Fantline.xcdatamodeld in Sources */,
 				5A6E057B27688082000BF8A1 /* DefultStore.swift in Sources */,
@@ -511,7 +517,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -566,7 +572,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -584,29 +590,31 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = CFBundleVersion;
 				DEVELOPMENT_ASSET_PATHS = "\"Fantline/Preview Content\"";
 				DEVELOPMENT_TEAM = 6UB6WM6VQR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Fantline/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "拉片Laper";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pruefantasy.Fantline;
 				PRODUCT_NAME = "拉片Laper";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Fantline/Fantline-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -618,28 +626,30 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = CFBundleVersion;
 				DEVELOPMENT_ASSET_PATHS = "\"Fantline/Preview Content\"";
 				DEVELOPMENT_TEAM = 6UB6WM6VQR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Fantline/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "拉片Laper";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pruefantasy.Fantline;
 				PRODUCT_NAME = "拉片Laper";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Fantline/Fantline-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
