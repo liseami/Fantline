@@ -8,8 +8,8 @@
 import SwiftUI
 
 
-public let GoldenH = SH * 0.618 * 0.618 * 0.618 * 0.618 * 0.618 * 0.618 * 0.618
-
+public let GoldenH = SH * 0.618 * 0.618 * 0.618 * 0.618 * 0.618 * 0.618
+ 
 
 //颜色主题
 public let CashmixColorThemes : [[Color]] = [

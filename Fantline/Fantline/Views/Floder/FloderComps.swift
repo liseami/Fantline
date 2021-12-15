@@ -22,13 +22,15 @@ struct OfficalFloderItem : View {
         Button {
             action()
         } label: {
-            VStack{
+            VStack(alignment: .leading, spacing: 12){
                 ICON(name : iconname)
                 Text(text)
+                    .mFont(style: .Body_15_B,color: .fc1)
             }
+            .frame(height: GoldenH * 1.618)
+            .padding(.all,12)
             .PF_Leading()
-            .frame(width: GoldenH * 1.618 * 1.618)
-            .background(Color.BackGround.clipShape(RoundedRectangle(cornerRadius:12, style: .continuous)))
+            .background(Color.Card.clipShape(RoundedRectangle(cornerRadius:12, style: .continuous)))
         }
 
     
@@ -51,12 +53,33 @@ struct FloderItem : View {
         } label: {
             HStack{
                 Text(text)
+                    .mFont(style: .Body_15_B,color: .fc1)
+                Spacer()
                 Text(nums)
+                    .mFont(style: .Body_15_B,color: .fc2)
+                ICON(sysname: "chevron.right",fcolor: .fc2)
             }
             .frame( height: GoldenH)
-            .background(Color.BackGround.clipShape(RoundedRectangle(cornerRadius:12, style: .continuous)))
+            .padding(.all,12)
+            .background(Color.Card.clipShape(RoundedRectangle(cornerRadius:12, style: .continuous)))
+
         }
 
        
+    }
+}
+
+struct OfficalFloderItem_Previews: PreviewProvider {
+    static var previews: some View {
+        
+        LibrayView()
+        OfficalFloderItem(text: "2323", iconname: "Star", action: {
+            
+        })
+            .previewLayout(.sizeThatFits)
+        FloderItem("232", nums: "2323", action: {
+            
+        })
+            .previewLayout(.sizeThatFits)
     }
 }

@@ -20,7 +20,7 @@ struct LibrayView: View {
                         OfficalFloderItem(text: "星标", iconname: "Star"){}
                     }
                     HStack(spacing:12){
-                        OfficalFloderItem(text: "待完成", iconname: "Waiting"){}
+                        OfficalFloderItem(text: "影片文件", iconname: "Compiling"){}
                         OfficalFloderItem(text: "最近删除", iconname: "Trash"){}
                     }
                 }
