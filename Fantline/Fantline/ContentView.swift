@@ -39,9 +39,12 @@ struct ContentView: View {
                 Tabbar()
                 
             }
-            .PF_Navilink(isPresented: $uistate.showLaperView) {
-                LaperView()
-            }
+            
+            .PF_FullScreen(isPresented: $uistate.showLaperView,
+                           onDismiss: {},
+                           content: {LaperView()}
+            )
+            
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .accentColor(.accentColor)

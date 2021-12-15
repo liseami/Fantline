@@ -6,8 +6,13 @@
 //
 
 import SwiftUI
+import AVKit
+
+
 
 struct LaperView: View {
+    
+    
     @ObservedObject var uistate = UIState.share
     @State private var showStep : Int = 0
     @State private var showBlackBackground : Bool = false
@@ -24,10 +29,6 @@ struct LaperView: View {
                     .blur(radius: 119)
                     .animation(.spring(), value: showBlackBackground)
                     .offset( y: showStep > 5 ? -SW - 50  : -SH * 2)
-//
-//                VisualEffectView(effect: UIBlurEffect(style : .systemChromeMaterialDark))
-//                    .ignoresSafeArea()
-                
             }
 
             
@@ -46,7 +47,6 @@ struct LaperView: View {
                  
                     )
                 
-
                 Spacer()
             }
             .padding(.all,24)

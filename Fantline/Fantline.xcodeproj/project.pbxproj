@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A2ECD7E27697AD600792E80 /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2ECD7D27697AD600792E80 /* VideoPlayer.swift */; };
 		5A300B8C274FD0B200587B2C /* FantlineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A300B8B274FD0B200587B2C /* FantlineApp.swift */; };
 		5A300B8E274FD0B200587B2C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A300B8D274FD0B200587B2C /* ContentView.swift */; };
 		5A300B90274FD0B300587B2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A300B8F274FD0B300587B2C /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		4FBB74C617C22AAC2AD4ED2F /* Pods_Fantline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fantline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A2ECD7D27697AD600792E80 /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
 		5A300B88274FD0B200587B2C /* 拉片Laper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "拉片Laper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A300B8B274FD0B200587B2C /* FantlineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FantlineApp.swift; sourceTree = "<group>"; };
 		5A300B8D274FD0B200587B2C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5A2ECD7C27697AC900792E80 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				5A2ECD7D27697AD600792E80 /* VideoPlayer.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
 		5A300B7F274FD0B200587B2C = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +152,7 @@
 		5A300B8A274FD0B200587B2C /* Fantline */ = {
 			isa = PBXGroup;
 			children = (
+				5A2ECD7C27697AC900792E80 /* Player */,
 				5A6E057527687406000BF8A1 /* Info.plist */,
 				5A300B8B274FD0B200587B2C /* FantlineApp.swift */,
 				5A6E057A27688082000BF8A1 /* DefultStore.swift */,
@@ -436,6 +447,7 @@
 				5A6E05832768878E000BF8A1 /* LaperView.swift in Sources */,
 				5A6E05802768844B000BF8A1 /* String+.swift in Sources */,
 				5A6E054227684B90000BF8A1 /* LibrayView.swift in Sources */,
+				5A2ECD7E27697AD600792E80 /* VideoPlayer.swift in Sources */,
 				5A6E0578276874D7000BF8A1 /* FloderComps.swift in Sources */,
 				5A6E054D276862A0000BF8A1 /* Comps.swift in Sources */,
 				5A300B98274FD0B300587B2C /* Fantline.xcdatamodeld in Sources */,
