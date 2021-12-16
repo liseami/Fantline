@@ -20,7 +20,7 @@ struct LibrayView: View {
                         OfficalFloderItem(text: "星标", iconname: "Star"){}
                     }
                     HStack(spacing:12){
-                        OfficalFloderItem(text: "影片文件", iconname: "Compiling"){}
+                        OfficalFloderItem(text: "播放清单", iconname: "list.and.film"){}
                         OfficalFloderItem(text: "最近删除", iconname: "Trash"){}
                     }
                 }
@@ -44,18 +44,18 @@ struct LibrayView: View {
         .navigationTitle(Text("拉片文档"))
         .navigationBarTitleDisplayMode(.inline)
         .PF_Navitop(style: offset < -5 ? .large : .none) {BlurView()} TopCenterView: {}
-
         
         
         
-       
+        
+        
     }
 }
 
 struct LibrayView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(uistate:UIState(.Libray))
-     
+        
     }
 }
 

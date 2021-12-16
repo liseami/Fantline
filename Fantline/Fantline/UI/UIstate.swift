@@ -36,7 +36,7 @@ class UIState : ObservableObject{
             case .Find:
                 return "location.fill"
             case .Libray:
-                return "list.and.film"
+                return "list.bullet.below.rectangle"
             case .Search:
                 return "magnifyingglass"
             }

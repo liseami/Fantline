@@ -590,7 +590,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = CFBundleVersion;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"Fantline/Preview Content\"";
 				DEVELOPMENT_TEAM = 6UB6WM6VQR;
 				ENABLE_PREVIEWS = YES;
@@ -608,7 +608,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pruefantasy.Fantline;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pruefantasy.film;
 				PRODUCT_NAME = "拉片Laper";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Fantline/Fantline-Bridging-Header.h";
@@ -626,7 +626,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = CFBundleVersion;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"Fantline/Preview Content\"";
 				DEVELOPMENT_TEAM = 6UB6WM6VQR;
 				ENABLE_PREVIEWS = YES;
@@ -644,7 +644,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pruefantasy.Fantline;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pruefantasy.film;
 				PRODUCT_NAME = "拉片Laper";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Fantline/Fantline-Bridging-Header.h";
