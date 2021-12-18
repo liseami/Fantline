@@ -39,6 +39,13 @@ struct ContentView: View {
                 Tabbar()
                 
             }
+            .toolbar(content: {
+                        ToolbarItem(placement: .navigationBarLeading) {
+                            PF_AsyncImage(UIImage(named: "LiseamiAvatar"))
+                                .scaledToFill()
+                                .frame(width: 32, height: 32)
+                        }
+                    })
             
             .PF_FullScreen(isPresented: $uistate.showLaperView,
                            onDismiss: {},
