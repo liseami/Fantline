@@ -7,6 +7,8 @@
 
 import FantasyUI
 
+
+
 protocol MTTargetType: CustomTargetType {
    
 }
