@@ -49,4 +49,5 @@ class UIState : ObservableObject{
     @Published var showLaperView : Bool = false
    
     
+    @Published var showLoginView  :Bool = false
 }

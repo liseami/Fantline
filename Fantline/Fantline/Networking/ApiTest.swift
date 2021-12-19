@@ -5,6 +5,8 @@
 //  Created by 赵翔宇 on 2021/12/18.
 //
 
+import FantasyUI
+
 
 //Api
 enum LogoutApi: CustomTargetType {

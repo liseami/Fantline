@@ -8,12 +8,11 @@
 import FantasyUI
 
 
-
-protocol MTTargetType: CustomTargetType {
-   
+protocol ApiType: CustomTargetType {
+    
 }
 
-extension MTTargetType {
+extension ApiType {
     
     var scheme: String { ProjectConfig.scheme }
     var host: String { ProjectConfig.host }
@@ -26,29 +25,15 @@ extension MTTargetType {
             "apiVersion": "1.0",
             "os": "1",// 1.ios, 2.android
         ]
-    
-        return headers
+        return nil
     }
     
   
     
 }
 
-
-struct NetResponse<Convertible> {
-    var code = "" //:200,
-    var message = "" //:null,
-    var path = "" //:"/sys/dict/group/lang",
-    var data: Convertible?
-}
-
-
-
-import Foundation
-
-
 struct ProjectConfig {
-    static let env: Environment = .test
+    static let env: Environment = .local
     
     enum Environment {
     case local, test
@@ -58,7 +43,7 @@ struct ProjectConfig {
     
     static var host: String {
         switch env {
-        case .local: return "localhost" //
+        case .local: return "192.168.1.2" //
         case .test: return "183.66.65.207" //http://183.66.65.207:8081/api/authorization/
         }
     }

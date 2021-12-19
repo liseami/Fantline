@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+@_exported import FantasyUI
 
 @main
 struct FantlineApp: App {

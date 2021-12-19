@@ -51,7 +51,8 @@
 		6A2FE94116067F12231EB9B9 /* Pods_Fantline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FBB74C617C22AAC2AD4ED2F /* Pods_Fantline.framework */; };
 		A24FB3222769D8AA00BC752B /* FloderComps.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24FB3212769D8AA00BC752B /* FloderComps.swift */; };
 		A286BDA0276DD127008472B6 /* ApiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A286BD9E276DD127008472B6 /* ApiTest.swift */; };
-		A286BDA1276DD127008472B6 /* ApiCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A286BD9F276DD127008472B6 /* ApiCenter.swift */; };
+		A286BDA1276DD127008472B6 /* HTTPConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A286BD9F276DD127008472B6 /* HTTPConfig.swift */; };
+		A286BDAC276EC2B5008472B6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A286BDAB276EC2B5008472B6 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,7 +103,8 @@
 		675ACC36DAAF3F9A01C31F1C /* Pods-Fantline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fantline.release.xcconfig"; path = "Target Support Files/Pods-Fantline/Pods-Fantline.release.xcconfig"; sourceTree = "<group>"; };
 		A24FB3212769D8AA00BC752B /* FloderComps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloderComps.swift; sourceTree = "<group>"; };
 		A286BD9E276DD127008472B6 /* ApiTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiTest.swift; sourceTree = "<group>"; };
-		A286BD9F276DD127008472B6 /* ApiCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiCenter.swift; sourceTree = "<group>"; };
+		A286BD9F276DD127008472B6 /* HTTPConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPConfig.swift; sourceTree = "<group>"; };
+		A286BDAB276EC2B5008472B6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E227FFFA0BCD629747AA9A50 /* Pods-Fantline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fantline.debug.xcconfig"; path = "Target Support Files/Pods-Fantline/Pods-Fantline.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -276,6 +278,7 @@
 		A24FB3232769D8C700BC752B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A286BDAB276EC2B5008472B6 /* LoginView.swift */,
 				5A6E053E27684B4C000BF8A1 /* TabMainViews */,
 				5A6E05812768877F000BF8A1 /* LaperView */,
 				A24FB3202769D71200BC752B /* Floder */,
@@ -286,7 +289,7 @@
 		A286BD9D276DD115008472B6 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				A286BD9F276DD127008472B6 /* ApiCenter.swift */,
+				A286BD9F276DD127008472B6 /* HTTPConfig.swift */,
 				A286BD9E276DD127008472B6 /* ApiTest.swift */,
 			);
 			path = Networking;
@@ -459,6 +462,7 @@
 				5A6E054927685F4A000BF8A1 /* UIstate.swift in Sources */,
 				5A6E054B27686004000BF8A1 /* Color.swift in Sources */,
 				5A300B8E274FD0B200587B2C /* ContentView.swift in Sources */,
+				A286BDAC276EC2B5008472B6 /* LoginView.swift in Sources */,
 				5A6E053C276847A8000BF8A1 /* Font.swift in Sources */,
 				5A6E057E2768830A000BF8A1 /* PublicFuncs.swift in Sources */,
 				5A6E054027684B64000BF8A1 /* FindView.swift in Sources */,
@@ -472,7 +476,7 @@
 				5A2ECD7E27697AD600792E80 /* VideoPlayer.swift in Sources */,
 				5A6E054D276862A0000BF8A1 /* Comps.swift in Sources */,
 				5A300B98274FD0B300587B2C /* Fantline.xcdatamodeld in Sources */,
-				A286BDA1276DD127008472B6 /* ApiCenter.swift in Sources */,
+				A286BDA1276DD127008472B6 /* HTTPConfig.swift in Sources */,
 				5A6E057B27688082000BF8A1 /* DefultStore.swift in Sources */,
 				5A300B8C274FD0B200587B2C /* FantlineApp.swift in Sources */,
 				5A6E054427684BA1000BF8A1 /* SearchView.swift in Sources */,

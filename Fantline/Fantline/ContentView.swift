@@ -34,23 +34,22 @@ struct ContentView: View {
                 case .Search:
                     SearchView()
                     
+                    
                 }
-                
                 Tabbar()
                 
             }
-            .toolbar(content: {
-                        ToolbarItem(placement: .navigationBarLeading) {
-                            PF_AsyncImage(UIImage(named: "LiseamiAvatar"))
-                                .scaledToFill()
-                                .frame(width: 32, height: 32)
-                        }
-                    })
-            
+            .toolbar(content: {UserAvatar})
+
             .PF_FullScreen(isPresented: $uistate.showLaperView,
                            onDismiss: {},
                            content: {LaperView()}
             )
+            .PF_FullScreen(isPresented: $uistate.showLoginView) {
+            } content: {
+                LoginView()
+            }
+
             
         }
         .navigationViewStyle(StackNavigationViewStyle())
@@ -58,6 +57,19 @@ struct ContentView: View {
         .preferredColorScheme(uistate.showLaperView ? .dark : .light)
    
       
+    }
+    
+    var UserAvatar :  some ToolbarContent {
+        ToolbarItem(placement: .navigationBarLeading) {
+            Button {
+                uistate.showLoginView.toggle()
+            } label: {
+                PF_AsyncImage(UIImage(named: "LiseamiAvatar"))
+                    .scaledToFill()
+                    .frame(width: 32, height: 32)
+                    .clipShape(Circle())
+            }
+        }
     }
     
    
