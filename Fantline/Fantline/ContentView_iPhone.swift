@@ -8,10 +8,10 @@
 import SwiftUI
 import CoreData
 
-struct ContentView: View {
+struct ContentView_iPhone: View {
     
     @Environment(\.managedObjectContext) private var viewContext
-    @ObservedObject var uistate = UIState.share
+    @ObservedObject var uistate = UIState.shared
     
     var body: some View {
         
@@ -52,9 +52,10 @@ struct ContentView: View {
 
             
         }
-        .navigationViewStyle(StackNavigationViewStyle())
         .accentColor(.accentColor)
         .preferredColorScheme(uistate.showLaperView ? .dark : .light)
+        .navigationViewStyle(.stack)
+    
    
       
     }
@@ -79,6 +80,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView_iPhone().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

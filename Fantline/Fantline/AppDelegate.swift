@@ -30,8 +30,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         return true
     }
     
+  
+    
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
-        return UIDevice.current.userInterfaceIdiom == .phone ? .portrait : .all
+              return Device.deviceType == .ipad
+                  ? UIInterfaceOrientationMask.all
+        : UIInterfaceOrientationMask.portrait
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {

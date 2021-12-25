@@ -13,7 +13,7 @@ import AVKit
 struct LaperView: View {
     
     
-    @ObservedObject var uistate = UIState.share
+    @ObservedObject var uistate = UIState.shared
     @State private var showStep : Int = 0
     @State private var showBlackBackground : Bool = false
     var body: some View {

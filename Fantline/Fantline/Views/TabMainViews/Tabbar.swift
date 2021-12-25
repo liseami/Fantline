@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Tabbar: View {
-    @ObservedObject var uistate = UIState.share
+    @ObservedObject var uistate = UIState.shared
     
     var body: some View {
         

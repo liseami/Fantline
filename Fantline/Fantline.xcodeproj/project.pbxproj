@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		5A2ECD7E27697AD600792E80 /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2ECD7D27697AD600792E80 /* VideoPlayer.swift */; };
 		5A300B8C274FD0B200587B2C /* FantlineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A300B8B274FD0B200587B2C /* FantlineApp.swift */; };
-		5A300B8E274FD0B200587B2C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A300B8D274FD0B200587B2C /* ContentView.swift */; };
+		5A300B8E274FD0B200587B2C /* ContentView_iPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A300B8D274FD0B200587B2C /* ContentView_iPhone.swift */; };
 		5A300B90274FD0B300587B2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A300B8F274FD0B300587B2C /* Assets.xcassets */; };
 		5A300B93274FD0B300587B2C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A300B92274FD0B300587B2C /* Preview Assets.xcassets */; };
 		5A300B95274FD0B300587B2C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A300B94274FD0B300587B2C /* Persistence.swift */; };
@@ -53,6 +53,14 @@
 		A286BDA0276DD127008472B6 /* ApiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A286BD9E276DD127008472B6 /* ApiTest.swift */; };
 		A286BDA1276DD127008472B6 /* HTTPConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A286BD9F276DD127008472B6 /* HTTPConfig.swift */; };
 		A286BDAC276EC2B5008472B6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A286BDAB276EC2B5008472B6 /* LoginView.swift */; };
+		A2D3B42227773E350007234C /* UserInfoFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D3B42127773E350007234C /* UserInfoFormView.swift */; };
+		A2D3B42427773FCD0007234C /* FirstCompleteLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D3B42327773FCD0007234C /* FirstCompleteLoginView.swift */; };
+		A2E3747627771B89006B91AB /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E3747527771B89006B91AB /* Buttons.swift */; };
+		A2E3747827771FBF006B91AB /* PF_TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E3747727771FBF006B91AB /* PF_TextField.swift */; };
+		A2E3747A2777232C006B91AB /* CommunIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E374792777232C006B91AB /* CommunIcon.swift */; };
+		A2E3747C277724AB006B91AB /* VerificationCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E3747B277724AB006B91AB /* VerificationCodeView.swift */; };
+		A2E3747F277724CC006B91AB /* UserDataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E3747E277724CC006B91AB /* UserDataCenter.swift */; };
+		A2E3748227773382006B91AB /* ContentView_iPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E3748127773382006B91AB /* ContentView_iPad.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,7 +68,7 @@
 		5A2ECD7D27697AD600792E80 /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
 		5A300B88274FD0B200587B2C /* 拉片Laper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "拉片Laper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A300B8B274FD0B200587B2C /* FantlineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FantlineApp.swift; sourceTree = "<group>"; };
-		5A300B8D274FD0B200587B2C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5A300B8D274FD0B200587B2C /* ContentView_iPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView_iPhone.swift; sourceTree = "<group>"; };
 		5A300B8F274FD0B300587B2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A300B92274FD0B300587B2C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5A300B94274FD0B300587B2C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -105,6 +113,15 @@
 		A286BD9E276DD127008472B6 /* ApiTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiTest.swift; sourceTree = "<group>"; };
 		A286BD9F276DD127008472B6 /* HTTPConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPConfig.swift; sourceTree = "<group>"; };
 		A286BDAB276EC2B5008472B6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A2D3B42127773E350007234C /* UserInfoFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoFormView.swift; sourceTree = "<group>"; };
+		A2D3B42327773FCD0007234C /* FirstCompleteLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCompleteLoginView.swift; sourceTree = "<group>"; };
+		A2E3747527771B89006B91AB /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		A2E3747727771FBF006B91AB /* PF_TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PF_TextField.swift; sourceTree = "<group>"; };
+		A2E374792777232C006B91AB /* CommunIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunIcon.swift; sourceTree = "<group>"; };
+		A2E3747B277724AB006B91AB /* VerificationCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeView.swift; sourceTree = "<group>"; };
+		A2E3747E277724CC006B91AB /* UserDataCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataCenter.swift; sourceTree = "<group>"; };
+		A2E3748027772D3E006B91AB /* Fantline.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Fantline.entitlements; sourceTree = "<group>"; };
+		A2E3748127773382006B91AB /* ContentView_iPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView_iPad.swift; sourceTree = "<group>"; };
 		E227FFFA0BCD629747AA9A50 /* Pods-Fantline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fantline.debug.xcconfig"; path = "Target Support Files/Pods-Fantline/Pods-Fantline.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,13 +174,16 @@
 		5A300B8A274FD0B200587B2C /* Fantline */ = {
 			isa = PBXGroup;
 			children = (
+				A2E3748027772D3E006B91AB /* Fantline.entitlements */,
+				A2E3747D277724B7006B91AB /* ViewModule */,
 				A286BD9D276DD115008472B6 /* Networking */,
 				5A6E052E276846CA000BF8A1 /* Fantline-Bridging-Header.h */,
 				5A6E052F276846CA000BF8A1 /* Fantline-Bridging-Header.m */,
 				5A300B8B274FD0B200587B2C /* FantlineApp.swift */,
 				5A6E057A27688082000BF8A1 /* DefultStore.swift */,
 				5A6E053127684746000BF8A1 /* AppDelegate.swift */,
-				5A300B8D274FD0B200587B2C /* ContentView.swift */,
+				5A300B8D274FD0B200587B2C /* ContentView_iPhone.swift */,
+				A2E3748127773382006B91AB /* ContentView_iPad.swift */,
 				5A300B8F274FD0B300587B2C /* Assets.xcassets */,
 				A24FB3232769D8C700BC752B /* Views */,
 				5A2ECD7C27697AC900792E80 /* Player */,
@@ -184,14 +204,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		5A6E05352768478C000BF8A1 /* UIKit */ = {
+		5A6E05352768478C000BF8A1 /* UIConfig */ = {
 			isa = PBXGroup;
 			children = (
 				5A6E054A27686003000BF8A1 /* Color.swift */,
 				5A6E0539276847A8000BF8A1 /* Font.swift */,
 				5A6E054C276862A0000BF8A1 /* Comps.swift */,
 			);
-			path = UIKit;
+			path = UIConfig;
 			sourceTree = "<group>";
 		};
 		5A6E053E27684B4C000BF8A1 /* TabMainViews */ = {
@@ -208,8 +228,9 @@
 		5A6E054727685F3A000BF8A1 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				5A6E05352768478C000BF8A1 /* UIKit */,
+				5A6E05352768478C000BF8A1 /* UIConfig */,
 				5A6E054827685F4A000BF8A1 /* UIstate.swift */,
+				A2E3747527771B89006B91AB /* Buttons.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -252,8 +273,10 @@
 		5A6E057C276882FF000BF8A1 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				A2E3747727771FBF006B91AB /* PF_TextField.swift */,
 				5A6E057F2768844B000BF8A1 /* String+.swift */,
 				5A6E057D2768830A000BF8A1 /* PublicFuncs.swift */,
+				A2E374792777232C006B91AB /* CommunIcon.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -278,7 +301,7 @@
 		A24FB3232769D8C700BC752B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A286BDAB276EC2B5008472B6 /* LoginView.swift */,
+				A2E3747427771967006B91AB /* LoginView */,
 				5A6E053E27684B4C000BF8A1 /* TabMainViews */,
 				5A6E05812768877F000BF8A1 /* LaperView */,
 				A24FB3202769D71200BC752B /* Floder */,
@@ -293,6 +316,25 @@
 				A286BD9E276DD127008472B6 /* ApiTest.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		A2E3747427771967006B91AB /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				A286BDAB276EC2B5008472B6 /* LoginView.swift */,
+				A2E3747B277724AB006B91AB /* VerificationCodeView.swift */,
+				A2D3B42127773E350007234C /* UserInfoFormView.swift */,
+				A2D3B42327773FCD0007234C /* FirstCompleteLoginView.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		A2E3747D277724B7006B91AB /* ViewModule */ = {
+			isa = PBXGroup;
+			children = (
+				A2E3747E277724CC006B91AB /* UserDataCenter.swift */,
+			);
+			path = ViewModule;
 			sourceTree = "<group>";
 		};
 		EA60E0B704135E051404AB8E /* Pods */ = {
@@ -459,22 +501,30 @@
 				5A6E053227684746000BF8A1 /* AppDelegate.swift in Sources */,
 				5A300B95274FD0B300587B2C /* Persistence.swift in Sources */,
 				5A6E054627685F24000BF8A1 /* Tabbar.swift in Sources */,
+				A2E3747627771B89006B91AB /* Buttons.swift in Sources */,
 				5A6E054927685F4A000BF8A1 /* UIstate.swift in Sources */,
 				5A6E054B27686004000BF8A1 /* Color.swift in Sources */,
-				5A300B8E274FD0B200587B2C /* ContentView.swift in Sources */,
+				5A300B8E274FD0B200587B2C /* ContentView_iPhone.swift in Sources */,
 				A286BDAC276EC2B5008472B6 /* LoginView.swift in Sources */,
 				5A6E053C276847A8000BF8A1 /* Font.swift in Sources */,
+				A2D3B42227773E350007234C /* UserInfoFormView.swift in Sources */,
 				5A6E057E2768830A000BF8A1 /* PublicFuncs.swift in Sources */,
 				5A6E054027684B64000BF8A1 /* FindView.swift in Sources */,
+				A2D3B42427773FCD0007234C /* FirstCompleteLoginView.swift in Sources */,
 				5A6E058527688B91000BF8A1 /* PieChart.swift in Sources */,
 				5A6E0530276846CA000BF8A1 /* Fantline-Bridging-Header.m in Sources */,
 				5A6E05832768878E000BF8A1 /* LaperView.swift in Sources */,
+				A2E3747C277724AB006B91AB /* VerificationCodeView.swift in Sources */,
 				5A6E05802768844B000BF8A1 /* String+.swift in Sources */,
+				A2E3747827771FBF006B91AB /* PF_TextField.swift in Sources */,
 				5A6E054227684B90000BF8A1 /* LibrayView.swift in Sources */,
 				A286BDA0276DD127008472B6 /* ApiTest.swift in Sources */,
 				A24FB3222769D8AA00BC752B /* FloderComps.swift in Sources */,
 				5A2ECD7E27697AD600792E80 /* VideoPlayer.swift in Sources */,
+				A2E3747F277724CC006B91AB /* UserDataCenter.swift in Sources */,
+				A2E3747A2777232C006B91AB /* CommunIcon.swift in Sources */,
 				5A6E054D276862A0000BF8A1 /* Comps.swift in Sources */,
+				A2E3748227773382006B91AB /* ContentView_iPad.swift in Sources */,
 				5A300B98274FD0B300587B2C /* Fantline.xcdatamodeld in Sources */,
 				A286BDA1276DD127008472B6 /* HTTPConfig.swift in Sources */,
 				5A6E057B27688082000BF8A1 /* DefultStore.swift in Sources */,
@@ -609,6 +659,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Fantline/Fantline.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"Fantline/Preview Content\"";
@@ -617,8 +668,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Fantline/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "拉片Laper";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -630,11 +681,12 @@
 				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pruefantasy.film;
 				PRODUCT_NAME = "拉片Laper";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Fantline/Fantline-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -645,6 +697,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Fantline/Fantline.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"Fantline/Preview Content\"";
@@ -653,8 +706,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Fantline/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "拉片Laper";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -666,10 +719,11 @@
 				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pruefantasy.film;
 				PRODUCT_NAME = "拉片Laper";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Fantline/Fantline-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

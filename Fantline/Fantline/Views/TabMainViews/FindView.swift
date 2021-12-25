@@ -26,6 +26,6 @@ struct FindView: View {
 
 struct FindView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(uistate: .init(.Find))
+        ContentView_iPhone(uistate: .init(.Find))
     }
 }

@@ -54,7 +54,7 @@ struct LibrayView: View {
 
 struct LibrayView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(uistate:UIState(.Libray))
+        ContentView_iPhone(uistate:UIState(.Libray))
         
     }
 }

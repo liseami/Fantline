@@ -9,15 +9,12 @@ import SwiftUI
 
 class UIState : ObservableObject{
     
-    static let share = UIState()
+    static let shared = UIState()
     
     
     init(_ appIndex : appPageTag? = nil) {
         self.appIndex = appIndex ?? .Search
     }
-    
-    
-    
     
     //MARK: 钟摆
     var timer_02 = Timer.publish(every: 0.2, on: .main, in: .common).autoconnect()
