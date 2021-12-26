@@ -22,8 +22,13 @@ struct FantlineApp: App {
     
     var body: some Scene {
         WindowGroup {
+            if uistate.showLoginView {
+                LoginView()
+            }else{
                 rootView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            }
+                
         }
         
         
