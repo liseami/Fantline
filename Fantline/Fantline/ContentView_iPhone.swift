@@ -40,7 +40,6 @@ struct ContentView_iPhone: View {
                 
             }
             .toolbar(content: {MainToolBar})
-
             .PF_FullScreen(isPresented: $uistate.showLaperView,
                            onDismiss: {},
                            content: {LaperView()}
@@ -60,7 +59,6 @@ struct ContentView_iPhone: View {
             
         }
         .accentColor(.accentColor)
-        .preferredColorScheme(uistate.showLaperView ? .dark : .light)
         .navigationViewStyle(.stack)
     
    

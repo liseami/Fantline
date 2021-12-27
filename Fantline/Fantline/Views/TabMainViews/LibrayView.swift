@@ -10,10 +10,7 @@ import SwiftUI
 struct LibrayView: View {
     @State private var offset : CGFloat = 0
     
-    @State private var showFilmList : Bool = false
-    @State private var showLaperDoc : Bool = false
-    @State private var showIdeaDoc : Bool = false
-    @State private var showShotPlan : Bool = false
+    @ObservedObject var uistate = UIState.shared
     
     var body: some View {
         
@@ -22,17 +19,21 @@ struct LibrayView: View {
             
                 VStack(spacing:24){
                         OfficalFloderItem(text: "个人片单", iconname: "Align-justify"){
-                            showFilmList.toggle()
+                            uistate.openLibraySubView(.FilmList)
                         }
+                        
                         OfficalFloderItem(text: "拉片文档", iconname: "Clipboard-list"){
-                            showLaperDoc.toggle()
+                            uistate.openLibraySubView(.LaperDoc)
                         }
+                        
                         OfficalFloderItem(text: "灵感笔记", iconname: "Star",isPro: true){
-                            showIdeaDoc.toggle()
+                            uistate.openLibraySubView(.MuseDoc)
                         }
+                        
                         OfficalFloderItem(text: "拍摄计划", iconname: "Done",isPro: true){
-                            showShotPlan.toggle()
+                            uistate.openLibraySubView(.ShotPlan)
                         }
+                        
             }
             .padding(.all,20)
             
@@ -50,21 +51,17 @@ struct LibrayView: View {
             Text("Laper")
                 .mFont(style: .LargeTitle_22_B,color: .fc1)
         }
-        .PF_Navilink(isPresented: $showFilmList) {
-            FilmListView()
+        .PF_Navilink(isPresented: $uistate.showLibraySubView) {
+            Group{
+                switch uistate.showLibraySubViewEnum{
+                case .FilmList : FilmListView()
+                case .LaperDoc : LaperDocView()
+                case .MuseDoc : MuseDocView()
+                case .ShotPlan : ShotPlanView()
+                }
+            }
         }
       
-        .PF_Navilink(isPresented: $showLaperDoc) {
-            LaperDocView()
-        }
-        .PF_Navilink(isPresented: $showIdeaDoc) {
-            MuseDocView()
-        }
-       
-        .PF_Navilink(isPresented: $showShotPlan) {
-            ShotPlanView()
-        }
-       
       
         
         

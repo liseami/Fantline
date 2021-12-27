@@ -38,6 +38,7 @@ class UIState : ObservableObject{
                 return "magnifyingglass"
             }
         }
+        
     }
     
     @Published var appIndex : appPageTag = .Search
@@ -46,4 +47,17 @@ class UIState : ObservableObject{
     @Published var showfilmDetailView : Bool = false
     @Published var showSettingView : Bool = false
     
+    
+    @Published var showLibraySubView : Bool = false
+    enum LibraySubviewName {
+        case FilmList
+        case LaperDoc
+        case MuseDoc
+        case ShotPlan
+    }
+    @Published var showLibraySubViewEnum : LibraySubviewName = .FilmList
+    func openLibraySubView(_ pageCase:LibraySubviewName){
+        self.showLibraySubViewEnum = pageCase
+        self.showLibraySubView = true
+    }
 }

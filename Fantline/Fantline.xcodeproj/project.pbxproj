@@ -69,6 +69,7 @@
 		A2FD92A8277970BD00C00F80 /* FilmListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD92A7277970BD00C00F80 /* FilmListView.swift */; };
 		A2FD92AA277970C400C00F80 /* MuseDocView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD92A9277970C400C00F80 /* MuseDocView.swift */; };
 		A2FD92AC277970CF00C00F80 /* ShotPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD92AB277970CF00C00F80 /* ShotPlanView.swift */; };
+		A2FD92AE2779827E00C00F80 /* LoginViewComps.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD92AD2779827E00C00F80 /* LoginViewComps.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +139,7 @@
 		A2FD92A7277970BD00C00F80 /* FilmListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmListView.swift; sourceTree = "<group>"; };
 		A2FD92A9277970C400C00F80 /* MuseDocView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseDocView.swift; sourceTree = "<group>"; };
 		A2FD92AB277970CF00C00F80 /* ShotPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotPlanView.swift; sourceTree = "<group>"; };
+		A2FD92AD2779827E00C00F80 /* LoginViewComps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewComps.swift; sourceTree = "<group>"; };
 		E227FFFA0BCD629747AA9A50 /* Pods-Fantline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fantline.debug.xcconfig"; path = "Target Support Files/Pods-Fantline/Pods-Fantline.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -354,6 +356,7 @@
 				A2E3747B277724AB006B91AB /* VerificationCodeView.swift */,
 				A2D3B42127773E350007234C /* UserInfoFormView.swift */,
 				A2D3B42327773FCD0007234C /* FirstCompleteLoginView.swift */,
+				A2FD92AD2779827E00C00F80 /* LoginViewComps.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				A24FB3222769D8AA00BC752B /* FloderComps.swift in Sources */,
 				5A2ECD7E27697AD600792E80 /* VideoPlayer.swift in Sources */,
 				A2E3747F277724CC006B91AB /* UserDataCenter.swift in Sources */,
+				A2FD92AE2779827E00C00F80 /* LoginViewComps.swift in Sources */,
 				A2E3747A2777232C006B91AB /* CommunIcon.swift in Sources */,
 				5A6E054D276862A0000BF8A1 /* Comps.swift in Sources */,
 				A2E3748227773382006B91AB /* ContentView_iPad.swift in Sources */,

@@ -11,17 +11,23 @@ import SwiftUI
 
 struct MainButton : View{
     var title : String
-    let avtion : ()->()
+    var color : Color = .MainColor
+    let action : ()->()
+    init(title : String,color : Color = .MainColor,action: @escaping ()->()){
+        self.title = title
+        self.color = color
+        self.action = action
+    }
     var body: some View{
         
         Button {
-            avtion()
+            action()
             madasoft()
         } label: {
             Text(title)
                 .mFont(style: .Title_17_B,color: .white)
         }
-        .buttonStyle(MainButtonStyle())
+        .buttonStyle(MainButtonStyle(color))
 
        
      
@@ -30,6 +36,10 @@ struct MainButton : View{
 }
 
 struct MainButtonStyle : ButtonStyle{
+    let color : Color
+    init(_ color : Color = .MainColor){
+        self.color = color
+    }
     func makeBody(configuration: Configuration) -> some
     View {
         let isPressed = configuration.isPressed
@@ -40,7 +50,7 @@ struct MainButtonStyle : ButtonStyle{
             Spacer()
         }
         .frame( height: GoldenH)
-            .background(Color.blue)
+            .background(color)
             .clipShape(RoundedRectangle(cornerRadius: 3, style: .continuous))
             .opacity(isPressed ? 0.8 : 1)
             .scaleEffect(isPressed ? 0.98 : 1)

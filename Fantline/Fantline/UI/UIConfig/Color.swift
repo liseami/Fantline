@@ -12,7 +12,7 @@ extension Color  {
     
     
     
-    static var MainColor = Color.red
+    static var MainColor = Color("AccentColor")
     static var SecondaryColor = Color.red
     
 

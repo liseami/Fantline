@@ -13,28 +13,37 @@ struct VerificationCodeView: View {
     @State private var PF_TextFieldFocus : Bool = true
     
     var body: some View {
-        VStack(spacing:12){
-            Text("欢迎使用拉片Laper")
-                .mFont(style: .LargeTitle_22_B,color: .fc1)
-            Text("请输入手机号码以注册/登陆")
-                .mFont(style: .Body_15_R,color: .fc2)
+        
+        ZStack {
+            Color.BackGround.ignoresSafeArea()
             
-           
-            textFiled
-            
-            
-            Spacer()
-            
-            Text("重新发送验证码")
-                .mFont(style: .Body_15_R,color: .blue)
-            Text("请检查你的手机号是否正确")
-                .mFont(style: .Body_12_R,color: .fc2)
-            
+            VStack(spacing:68){
+                VStack(spacing:12){
+                    Text("欢迎使用拉片Laper")
+                        .mFont(style: .LargeTitle_22_B,color: .fc1)
+                    Text("请输入手机号码以注册/登陆")
+                        .mFont(style: .Body_15_R,color: .fc2)
+                }
+
+               
+                textFiled
+                
+                
+                Spacer()
+                
+                VStack(spacing:12){
+                Text("重新发送验证码")
+                    .mFont(style: .Body_15_R,color: .MainColor)
+                Text("请检查你的手机号是否正确")
+                    .mFont(style: .Body_12_R,color: .fc2)
+                }
+                
+            }
+            .padding(.vertical,32)
+            .navigationBarTitleDisplayMode(.inline)
+            .PF_Navilink(isPresented: $userDC.showUserInfoFormView) {
+                UserInfoFormView()
         }
-        .padding(.vertical,32)
-        .navigationBarTitleDisplayMode(.inline)
-        .PF_Navilink(isPresented: $userDC.showUserInfoFormView) {
-            UserInfoFormView()
         }
     }
     
@@ -55,7 +64,6 @@ struct VerificationCodeView: View {
             Divider()
                 .opacity(0.6)
         }
-        .padding(.top,44)
     }
     
     var characterInput : some View {
@@ -68,6 +76,7 @@ struct VerificationCodeView: View {
                             if userDC.verificationCodeInput.count - 1 < index{
                                 RoundedRectangle(cornerRadius: 12, style: .continuous)
                                     .frame(width: 24, height: 2)
+                                    .foregroundColor(.MainColor)
                             }
                             else{
                                 Text(getStr(index: index))

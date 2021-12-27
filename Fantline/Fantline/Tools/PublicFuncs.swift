@@ -17,14 +17,17 @@ public func Customappearance() {
     
     let appearance = UINavigationBarAppearance()
     appearance.configureWithTransparentBackground()
+//    appearance.configureWithOpaqueBackground()
+//    appearance.backgroundColor = UIColor(Color.BackGround)
+ 
 
     UINavigationBar.appearance().compactAppearance = appearance
     UINavigationBar.appearance().standardAppearance = appearance
     UINavigationBar.appearance().scrollEdgeAppearance = appearance
     
 
-    UITableView.appearance().backgroundColor = .clear
-    UITextView.appearance().backgroundColor = .clear
+    UITableView.appearance().backgroundColor = UIColor(Color.BackGround)
+    UITextView.appearance().backgroundColor = UIColor(Color.BackGround)
     UITableView.appearance().separatorStyle = .none
     UITableView.appearance().separatorColor = .clear
     UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = UIColor(Color.accentColor)
