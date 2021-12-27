@@ -12,7 +12,7 @@ struct PieChart: View {
    
     
   var data: [Double] = [32,42,53]
-  private var colors: [Color]  =  [.CashYellow,.CashPink,.CashPinkLight]
+  private var colors: [Color]  =  [.FilmYellow,.CashPink,.CashPinkLight]
   private let sliceOffset: Double = -.pi / 2
     
     init(_ themeID : Int = 0 ){

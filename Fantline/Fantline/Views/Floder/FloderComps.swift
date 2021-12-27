@@ -11,27 +11,41 @@ import SwiftUI
 struct OfficalFloderItem : View {
     var text : String
     var iconname : String
+    let isPro : Bool
     var action : ()->()
     
-    init(text : String,iconname : String, action : @escaping()->()){
+    init(text : String,iconname : String,isPro : Bool = false, action : @escaping()->()){
         self.text = text
         self.iconname = iconname
         self.action = action
+        self.isPro = isPro
     }
+    
     var body: some View{
-        Button {
-            action()
-        } label: {
-            VStack(alignment: .leading, spacing: 12){
-                ICON(name : iconname)
+       
+            HStack(alignment: .center, spacing: 12){
+                ICON(name : iconname,fcolor: .FilmBlue,size: 28)
                 Text(text)
-                    .mFont(style: .Body_15_B,color: .fc1)
+                    .mFont(style: .Title_17_B,color: .fc1)
+                Text("Laper Pro")
+                    .mFont(style: .Body_15_B,color: .FilmYellow)
+                    .padding(.horizontal,4)
+                    .padding(.vertical,2)
+                    .background(Color.FilmYellow.opacity(0.1))
+                    .cornerRadius(3)
+                    .ifshow(isPro)
+                Spacer()
+                ICON(sysname: "chevron.right",fcolor: .fc3)
             }
-            .frame(height: GoldenH * 1.618)
-            .padding(.all,12)
-            .PF_Leading()
-            .background(Color.Card.clipShape(RoundedRectangle(cornerRadius:12, style: .continuous)))
-        }
+            .frame(height: GoldenH)
+            .background(Color.BackGround)
+            .onTapGesture {
+                action()
+            }
+
+//            .background(Color.Card.clipShape(RoundedRectangle(cornerRadius: 4, style: .continuous)))
+
+        
 
     
     }
@@ -72,7 +86,12 @@ struct FloderItem : View {
 struct OfficalFloderItem_Previews: PreviewProvider {
     static var previews: some View {
         
-        LibrayView()
+      
+        ZStack{
+            Color.BackGround.ignoresSafeArea()
+            LibrayView()
+        }
+     
         OfficalFloderItem(text: "2323", iconname: "Star", action: {
             
         })

@@ -34,7 +34,7 @@ struct Tabbar: View {
         }
         .frame( height: 44, alignment: .center)
         .overlay(Divider().opacity(0.3),alignment: .top)
-        .background(BlurView().ignoresSafeArea())
+        .background(Color.Card.ignoresSafeArea())
         .MoveTo(.bottomCenter)
     
         

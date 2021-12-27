@@ -27,6 +27,7 @@ struct FantlineApp: App {
             }else{
                 rootView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .preferredColorScheme(.dark)
             }
                 
         }

@@ -12,7 +12,7 @@ struct LaperDocCard : View {
     
     var body: some View{
         VStack(spacing:0){
-            Image("11")
+            Image("15")
                 .resizable()
                 .scaledToFill()
                 .frame( height: (SW - 32) * 0.618 * 0.618,alignment: .top)
@@ -27,15 +27,17 @@ struct LaperDocCard : View {
                     }
                     .padding(.all,12)
         }
-        .background(Color.Card)
         .frame(width: SW * 0.93)
         .cornerRadius(4)
-        .overlay(RoundedRectangle(cornerRadius: 4, style: .continuous).stroke(lineWidth: 0.5).foregroundColor(.fc3.opacity(0.3)))
+        .overlay(RoundedRectangle(cornerRadius: 4, style: .continuous).stroke(lineWidth: 0.5).foregroundColor(.fc3.opacity(0.6)))
     }
 }
 
 struct LaperDocCard_Previews: PreviewProvider {
     static var previews: some View {
-        LaperDocCard()
+        
+        LaperDocCard(title: "LaperDocCard", subline: "LaperDocCardSubline")
+            .padding()
+            .previewLayout(.sizeThatFits)
     }
 }

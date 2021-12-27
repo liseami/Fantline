@@ -39,7 +39,7 @@ struct ContentView_iPhone: View {
                 Tabbar()
                 
             }
-            .toolbar(content: {UserAvatar})
+            .toolbar(content: {MainToolBar})
 
             .PF_FullScreen(isPresented: $uistate.showLaperView,
                            onDismiss: {},
@@ -48,6 +48,13 @@ struct ContentView_iPhone: View {
             .PF_FullScreen(isPresented: $uistate.showLoginView) {
             } content: {
                 LoginView()
+            }
+            .PF_FullScreen(isPresented: $uistate.showSettingView) {
+            } content: {
+                SettingView()
+            }
+            .PF_Navilink(isPresented: $uistate.showfilmDetailView) {
+                FilmDetailView()
             }
 
             
@@ -60,17 +67,29 @@ struct ContentView_iPhone: View {
       
     }
     
-    var UserAvatar :  some ToolbarContent {
-        ToolbarItem(placement: .navigationBarLeading) {
-            Button {
-                uistate.showLoginView.toggle()
-            } label: {
-                PF_AsyncImage(UIImage(named: "LiseamiAvatar"))
-                    .scaledToFill()
-                    .frame(width: 32, height: 32)
-                    .clipShape(Circle())
+    var MainToolBar :  some ToolbarContent {
+        Group{
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    uistate.showLoginView.toggle()
+                } label: {
+                    PF_AsyncImage(UIImage(named: "19"))
+                        .scaledToFill()
+                        .frame(width: 32, height: 32)
+                        .clipShape(Circle())
+                }
+            }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    uistate.showSettingView.toggle()
+                } label: {
+                    ICON(sysname:"gearshape",fcolor: .fc1){
+                        uistate.showSettingView.toggle()
+                    }
+                }
             }
         }
+       
     }
     
    

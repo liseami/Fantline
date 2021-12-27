@@ -33,14 +33,14 @@ extension Color  {
     
     
     
-    static var CashBlue = Color("CashBlue")
+    static var FilmBlue = Color("FilmBlue")
     static var CashBlueLight = Color("CashBlueLight")
     static var CashGreen = Color("CashGreen")
     static var CashGreenLight = Color("CashGreenLight")
     static var CashPink = Color("CashPink")
     static var CashPinkLight = Color("CashPinkLight")
     static var CashRed = Color("CashRed")
-    static var CashYellow = Color("CashYellow")
+    static var FilmYellow = Color("FilmYellow")
     
 }
 

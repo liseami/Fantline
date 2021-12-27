@@ -12,7 +12,7 @@ struct CloseBtn : View {
     let action : ()->()
     
     var body: some View{
-        ICON(sysname:"xmark",fcolor: .fc2){
+        ICON(sysname:"xmark",fcolor: .fc1){
             action()
         }
     }

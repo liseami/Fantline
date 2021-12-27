@@ -40,11 +40,10 @@ class UIState : ObservableObject{
         }
     }
     
-    @Published var appIndex : appPageTag = .Find
-    
-    
+    @Published var appIndex : appPageTag = .Search
     @Published var showLaperView : Bool = false
-   
+    @Published var showLoginView  :Bool = false
+    @Published var showfilmDetailView : Bool = false
+    @Published var showSettingView : Bool = false
     
-    @Published var showLoginView  :Bool = true
 }
