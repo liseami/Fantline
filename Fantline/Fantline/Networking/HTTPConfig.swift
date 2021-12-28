@@ -21,7 +21,7 @@ extension ApiType {
     
 
     var headers: [String: String]? {
-        var headers = [
+        var _ = [
             "apiVersion": "1.0",
             "os": "1",// 1.ios, 2.android
         ]
@@ -39,22 +39,17 @@ struct ProjectConfig {
     case local, test
     }
     
-    static var scheme: String { "http" }
+    static var scheme: String { "https" }
     
     static var host: String {
         switch env {
-        case .local: return "192.168.1.2" //
-        case .test: return "183.66.65.207" //http://183.66.65.207:8081/api/authorization/
+        case .local: return "imdb-api.com" //
+        case .test: return "" //
         }
     }
     
     static var port: Int? {
-        switch env {
-        case .local:
-            return 8080
-        case .test:
-            return 9999
-        }
+        return nil
     }
     
    

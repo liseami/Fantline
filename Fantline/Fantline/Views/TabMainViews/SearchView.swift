@@ -56,7 +56,7 @@ struct SearchView: View {
             LazyVGrid(columns:columns,spacing:12,content: {
                 ///1...9
                 ForEach(1 ..< 30) { index in
-                    filmBanner("\(index)")
+                    filmBanner(imagename: "\(index)")
                 }
             })
         }

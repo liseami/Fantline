@@ -55,6 +55,9 @@ struct ContentView_iPhone: View {
             .PF_Navilink(isPresented: $uistate.showfilmDetailView) {
                 FilmDetailView()
             }
+            .PF_Sheet(isPresented: $uistate.showAddMenu, backColor: .clear) {
+                addMenu
+            }
 
             
         }
@@ -63,6 +66,41 @@ struct ContentView_iPhone: View {
     
    
       
+    }
+    
+    var addMenu : some View {
+        HStack{
+            Spacer()
+            VStack{
+                ICON(name: "Edit",fcolor: .CashRed,size: 32)
+                    .frame(width: GoldenH * 1.618, height: GoldenH)
+                    .background(Color.Card)
+                    .clipShape(RoundedRectangle(cornerRadius: 6, style: .continuous))
+                Text("灵感速记")
+            }
+            Spacer()
+            VStack{
+                ICON(name: "Clipboard-list",fcolor: .FilmYellow,size: 32)
+                    .frame(width: GoldenH * 1.618, height: GoldenH)
+                    .background(Color.Card)
+                    .clipShape(RoundedRectangle(cornerRadius: 6, style: .continuous))
+                Text("拉片文档")
+            }
+            Spacer()
+            VStack{
+                ICON(name: "Menu",fcolor: .FilmBlue,size: 32)
+                    .frame(width: GoldenH * 1.618, height: GoldenH)
+                    .background(Color.Card)
+                    .clipShape(RoundedRectangle(cornerRadius: 6, style: .continuous))
+                Text("电影评论")
+            }
+            Spacer()
+        }
+        .mFont(style: .Body_13_R,color: .fc2)
+        .padding(.all,16)
+        .background(BlurView())
+        .clipShape(RoundedRectangle(cornerRadius: 6, style: .continuous))
+        .padding(.all,20)
     }
     
     var MainToolBar :  some ToolbarContent {
@@ -97,6 +135,9 @@ struct ContentView_iPhone: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView_iPhone().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView_iPhone()
+            .preferredColorScheme(.dark)
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+          
     }
 }

@@ -7,13 +7,16 @@
 
 import SwiftUI
 
+
 struct filmList : View {
-    let title : String
-    let startIndex : Int
-    init(title:String,startIndex:Int){
+    var title : String
+    var list : [Top250DataDetail]?
+    
+    init(title:String,list:[Top250DataDetail]?){
         self.title = title
-        self.startIndex = startIndex
+        self.list = list
     }
+    
     var body: some View{
         VStack(spacing:12){
             Text(title)
@@ -22,13 +25,19 @@ struct filmList : View {
                 .padding(.leading,12)
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing:6){
-                    Spacer().frame(width: 6)
-                ForEach(startIndex ..< startIndex + 6) { index in
-                  
-                        filmBanner("\(index)")
                     
-
-                        
+                    Spacer().frame(width: 6)
+                    if let list = list {
+                        ForEach(list,id:\.self.id) { film in
+                            filmBanner(url: film.image)
+                                .onTapGesture {
+                                    UIState.shared.showfilmDetailView = true
+                                    UIState.shared.targetFilm = film
+                                }
+                            }
+                    }
+                  ForEach(0 ..< 4) { index in
+                        filmBanner(url: "")
                     }
                 Spacer().frame(width: 12)
                 }
@@ -40,57 +49,89 @@ struct filmList : View {
 
 
 struct filmBanner : View {
-    let imagename : String
-    init(_ imagename: String){
+    var imagename : String?
+    var url : String?
+    
+    public init(imagename: String?){
         self.imagename = imagename
+        self.url = nil
     }
+    
+    public init(url: String?){
+        self.url = url
+        self.imagename = nil
+    }
+    
     var body: some View{
         
         
-        if #available(iOS 15.0, *) {
-            banner
-            
-                .contentShape(.contextMenuPreview, RoundedRectangle(cornerRadius: 4, style: .continuous))
-        } else {
-             banner
-        }
+        banner
         
     }
     
+    @ViewBuilder
     var banner : some View {
-        Image(imagename)
-            .resizable()
-            .scaledToFill()
-            .frame(width: SW * 0.3,height: SW * 0.3 * 1.618)
-            .cornerRadius(4)
-            .onTapGesture {
-                UIState.shared.showfilmDetailView = true
-            }
-            .contextMenu {
-                Button {
-                } label: {
-                    Label {
-                        Text("添加至资料库")
-                    } icon: {
-                        ICON(sysname: "plus.app")
+        if let imagename = imagename {
+            Image(imagename)
+                .resizable()
+                .scaledToFill()
+                .frame(width: SW * 0.3,height: SW * 0.3 * 1.618)
+                .cornerRadius(4)
+              
+                .contextMenu {
+                    Button {
+                    } label: {
+                        Label {
+                            Text("添加至资料库")
+                        } icon: {
+                            ICON(sysname: "plus.app")
+                        }
                     }
                 }
+        }else{
+            if #available(iOS 15.0, *) {
+                AsyncImage(url: URL(string:url!)){ image in
+                    image
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: SW * 0.3,height: SW * 0.3 * 1.618)
+                        .cornerRadius(4)
+                        .contextMenu {
+                            Button {
+                            } label: {
+                                Label {
+                                    Text("添加至资料库")
+                                } icon: {
+                                    ICON(sysname: "plus.app")
+                                }
+                            }
+                        }
+                }placeholder: {
+                    Color.Card
+                        .frame(width: SW * 0.3,height: SW * 0.3 * 1.618)
+                        .cornerRadius(4)
+                }
+                 
+            } else {
+                // Fallback on earlier versions
             }
+        }
+       
     }
 }
 
 struct filmComps_Previews: PreviewProvider {
     static var previews: some View {
-        filmList(title: "Exmple", startIndex: 1)
+        filmList(title: "Exmple", list: [Top250DataDetail( image: "https://m.media-amazon.com/images/M/MV5BM2RiZDVjYWEtZGNhYy00ZGU0LTgwZjMtZTJmNmMyNGQ5NGYyXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_UX128_CR0,3,128,176_AL_.jpg")])
             .padding()
             .previewLayout(.sizeThatFits)
-        filmBanner("3")
+        filmBanner(url: "https://m.media-amazon.com/images/M/MV5BM2RiZDVjYWEtZGNhYy00ZGU0LTgwZjMtZTJmNmMyNGQ5NGYyXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_UX128_CR0,3,128,176_AL_.jpg")
             .previewLayout(.sizeThatFits)
         VStack{
-            filmList(title: "Exmple", startIndex: 1)
-            filmList(title: "Exmple", startIndex: 1)
+            filmList(title: "Exmple", list: nil)
+            filmList(title: "Exmple", list: nil)
             Spacer()
-            filmBanner("3")
+            filmBanner(imagename: "3")
        
         }
         .padding(.all,12)

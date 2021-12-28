@@ -23,8 +23,9 @@ struct Tabbar: View {
 
               
             }
+            
             Button {
-                uistate.showLaperView.toggle()
+                uistate.showAddMenu.toggle()
             } label: {
                 Rectangle()
                     .hidden()

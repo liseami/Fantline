@@ -8,42 +8,66 @@
 import SwiftUI
 
 
-struct OfficalFloderItem : View {
+struct FilmListFloder : View {
     var text : String
-    var iconname : String
-    let isPro : Bool
+    var imagename : String
+    var style : UIState.FilmListStyle
+    @Namespace var filmlistanimation
     var action : ()->()
     
-    init(text : String,iconname : String,isPro : Bool = false, action : @escaping()->()){
+    init(text : String,imagename : String ,style :UIState.FilmListStyle ,  action : @escaping()->()){
         self.text = text
-        self.iconname = iconname
+        self.style = style
         self.action = action
-        self.isPro = isPro
+        self.imagename = imagename
     }
     
     var body: some View{
        
-            HStack(alignment: .center, spacing: 12){
-                ICON(name : iconname,fcolor: .FilmBlue,size: 28)
-                Text(text)
-                    .mFont(style: .Title_17_B,color: .fc1)
-                Text("Laper Pro")
-                    .mFont(style: .Body_15_B,color: .FilmYellow)
-                    .padding(.horizontal,4)
-                    .padding(.vertical,2)
-                    .background(Color.FilmYellow.opacity(0.1))
-                    .cornerRadius(3)
-                    .ifshow(isPro)
-                Spacer()
-                ICON(sysname: "chevron.right",fcolor: .fc3)
+        
+        Group{
+            switch style {
+            case .block:
+                VStack(alignment: .leading, spacing: 6){
+                    Image(imagename)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: (SW - 48)/2, height: (SW - 48)/2,alignment: .top)
+                        .clipShape(RoundedRectangle(cornerRadius: 4, style: .continuous))
+                    Text(text)
+                        .mFont(style: .Body_15_B,color: .fc1)
+                    Text(text)
+                        .mFont(style: .Body_12_R,color: .fc2)
+                }
+               
+            
+       
+               
+            case .list:
+                HStack(alignment: .center, spacing: 12){
+                    Image(imagename)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: GoldenH * 1.618, height: GoldenH * 1.618,alignment: .top)
+                        .clipShape(RoundedRectangle(cornerRadius: 4, style: .continuous))
+                    VStack(alignment: .leading,  spacing:4){
+                        Text(text)
+                            .mFont(style: .Body_15_B,color: .fc1)
+                        Text(text)
+                            .mFont(style: .Body_12_R,color: .fc2)
+                    }
+                    
+                    Spacer()
+                }
+          
             }
-            .frame(height: GoldenH)
-            .background(Color.BackGround)
+        }
+      
+        
             .onTapGesture {
                 action()
             }
 
-//            .background(Color.Card.clipShape(RoundedRectangle(cornerRadius: 4, style: .continuous)))
 
         
 
@@ -92,10 +116,23 @@ struct OfficalFloderItem_Previews: PreviewProvider {
             LibrayView()
         }
      
-        OfficalFloderItem(text: "2323", iconname: "Star", action: {
+        ZStack{
+            Color.BackGround.ignoresSafeArea()
+            VStack{
+                FilmListFloder(text: "2323",  imagename: "3",style: .list, action: {
+                    
+                })
+                FilmListFloder(text: "2323",  imagename: "3",style: .list, action: {
+                    
+                })
+                FilmListFloder(text: "2323",  imagename: "3",style: .list, action: {
+                    
+                })
+            }
+      
+        }
+       
             
-        })
-            .previewLayout(.sizeThatFits)
         FloderItem("232", nums: "2323", action: {
             
         })

@@ -9,7 +9,7 @@ import FantasyUI
 
 
 //Api
-enum LogoutApi: CustomTargetType {
+enum LogoutApi: ApiType {
     case setOut
     
     

@@ -24,7 +24,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         Customappearance()
 //
 //        //初次登陆检查
-//        LaunchManager.shared.firstLaunchTest()
+        LaunchManager.shared.firstLaunchTest()
 //
         
         return true

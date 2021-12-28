@@ -11,31 +11,68 @@ struct LibrayView: View {
     @State private var offset : CGFloat = 0
     
     @ObservedObject var uistate = UIState.shared
-    
+   
     var body: some View {
         
-        
+        let tabText = ["片单","拉片文档","灵感匣"]
         PF_OffsetScrollView(offset: $offset) {
             
-                VStack(spacing:24){
-                        OfficalFloderItem(text: "个人片单", iconname: "Align-justify"){
-                            uistate.openLibraySubView(.FilmList)
+                VStack(spacing:20){
+                    
+                    HStack(spacing:24){
+                        ForEach(0..<3){index in
+                            Text(tabText[index])
+                                .padding(.vertical,6)
+                                .padding(.horizontal,12)
+                                .overlay(Capsule(style: .continuous)
+                                            .stroke(lineWidth: 0.5)
+                                            .foregroundColor(.fc2))
                         }
+                      
                         
-                        OfficalFloderItem(text: "拉片文档", iconname: "Clipboard-list"){
-                            uistate.openLibraySubView(.LaperDoc)
+                        Spacer()
+                    }
+                    .mFont(style: .Title_17_B,color: .fc1)
+
+                    
+                    HStack{
+                        Text("最近添加")
+                        Spacer()
+                        ICON(name: uistate.FilmListModule == .block
+                             ? "Align-justify" : "Layout-4-blocks",fcolor: .fc1){
+                            uistate.FilmListModuleChange()
                         }
-                        
-                        OfficalFloderItem(text: "灵感笔记", iconname: "Star",isPro: true){
-                            uistate.openLibraySubView(.MuseDoc)
-                        }
-                        
-                        OfficalFloderItem(text: "拍摄计划", iconname: "Done",isPro: true){
-                            uistate.openLibraySubView(.ShotPlan)
-                        }
-                        
-            }
-            .padding(.all,20)
+                    }
+                    .mFont(style: .Title_17_B,color: .fc1)
+                    
+                    
+                        let w = uistate.FilmListModule == .list ? (SW - 24) : (SW - 48)/2
+                        let columns =
+                        Array(repeating:GridItem(.adaptive(minimum: w, maximum: w), spacing: 24), count: uistate.FilmListModule == .list ? 1 : 2)
+                        LazyVGrid(columns:columns,spacing:12,content: {
+                            ForEach(1..<5){index in
+                                FilmListFloder(text: randomString(6),imagename: "\(index * 3)",style: uistate.FilmListModule){
+                                    uistate.openLibraySubView(.FilmList)
+                                }
+                                .id(index)
+                            }
+                        })
+                        .PF_Animation(.spring())
+                    
+                    
+                 
+                    
+                    
+                    HStack{
+                        Text("拉片文档")
+                        Spacer()
+                    }
+                    .mFont(style: .Title_17_B,color: .fc1)
+                    
+                    
+                }
+                .padding(.all,12)
+                .padding(.vertical,12)
             
         }
         .toolbar(content: {

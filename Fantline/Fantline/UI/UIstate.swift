@@ -11,10 +11,11 @@ class UIState : ObservableObject{
     
     static let shared = UIState()
     
-    
+    let userdefult = UserDefaults.standard
     init(_ appIndex : appPageTag? = nil) {
-        self.appIndex = appIndex ?? .Search
+        self.appIndex = appIndex ?? .Find
     }
+    @Published var appIndex : appPageTag = .Find
     
     //MARK: 钟摆
     var timer_02 = Timer.publish(every: 0.2, on: .main, in: .common).autoconnect()
@@ -41,12 +42,13 @@ class UIState : ObservableObject{
         
     }
     
-    @Published var appIndex : appPageTag = .Search
+  
     @Published var showLaperView : Bool = false
     @Published var showLoginView  :Bool = false
     @Published var showfilmDetailView : Bool = false
     @Published var showSettingView : Bool = false
     
+    @Published var showAddMenu : Bool = false
     
     @Published var showLibraySubView : Bool = false
     enum LibraySubviewName {
@@ -60,4 +62,36 @@ class UIState : ObservableObject{
         self.showLibraySubViewEnum = pageCase
         self.showLibraySubView = true
     }
+    
+    
+    @Published var targetFilm : Top250DataDetail = Top250DataDetail(id: "1", rank: "1", title: "碧海蓝天", fullTitle: "《碧海蓝天》", year: "1993", image: "dii", crew: "Frank Darabont (dir.), Tim Robbins, Morgan Freeman", imDbRating: "9.2", imDbRatingCount: "2512082")
+    
+    enum FilmListStyle {
+        case block ,list
+    }
+    func FilmListModuleChange(){
+        switch self.FilmListModule{
+        case .block:
+            FilmListModule = .list
+        case .list:
+            FilmListModule = .block
+        }
+    }
+    var FilmListModule : FilmListStyle {
+        get {
+            let str =  userdefult.string(forKey: "FilmListModule")
+            if str == "block" {return .block}
+            if str == "list" {return .list}
+            else{
+                return .block
+            }
+        }
+        set{
+            objectWillChange.send()
+            if newValue == .block {userdefult.set("block", forKey: "FilmListModule")}
+            if newValue == .list {userdefult.set("list", forKey: "FilmListModule")}
+        }
+    }
+    
+    
 }

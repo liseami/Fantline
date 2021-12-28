@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct FindView: View {
+    
     @State private var offset : CGFloat = 0
+    @ObservedObject var vm = FindViewModule.shared
+    
     var body: some View {
         
         
@@ -18,19 +21,36 @@ struct FindView: View {
                 .frame( height: SH * 0.3)
                 .MoveTo(.topCenter)
                 .ignoresSafeArea()
-            
+//            
             PF_OffsetScrollView(offset: $offset) {
+                
                 LazyVStack(alignment: .center, spacing: 18, pinnedViews: .sectionFooters){
+                    
                     laperDocList
-                    filmList(title: "院线值得看", startIndex: 1)
-                    filmList(title: "影史经典", startIndex: 7)
-                    filmList(title: "Laper名人堂导演", startIndex: 13)
-                    filmList(title: "Laper名人堂演员", startIndex: 20)
+                    
+                    if vm.IMDBtop250List.isEmpty{
+                        ProgressView()
+                    }else{
+                        filmList(title: "WisperTop250",list: vm.IMDBtop250List)
+                    }
+                    
+                    
+                    filmList(title: "影史经典",list: nil)
+                    
+                    filmList(title: "Laper名人堂导演", list: nil)
+                    
+                    filmList(title: "Laper名人堂演员",list: nil)
                 }
                 .padding(.top,32)
             }
+            
+         
+            
         }
-      
+        .onAppear(perform: {
+            guard vm.IMDBtop250List.isEmpty else {return}
+            vm.getIMDBtop250List()
+        })
         .PF_Navitop(style: offset < -10 ? .large : .none) {
             BlurView()
         } TopCenterView: {

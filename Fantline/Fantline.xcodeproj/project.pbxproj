@@ -70,6 +70,8 @@
 		A2FD92AA277970C400C00F80 /* MuseDocView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD92A9277970C400C00F80 /* MuseDocView.swift */; };
 		A2FD92AC277970CF00C00F80 /* ShotPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD92AB277970CF00C00F80 /* ShotPlanView.swift */; };
 		A2FD92AE2779827E00C00F80 /* LoginViewComps.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD92AD2779827E00C00F80 /* LoginViewComps.swift */; };
+		A2FD92B027799FFE00C00F80 /* LacunchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD92AF27799FFE00C00F80 /* LacunchManager.swift */; };
+		A2FD92B22779F04F00C00F80 /* FindViewModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD92B12779F04F00C00F80 /* FindViewModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +142,8 @@
 		A2FD92A9277970C400C00F80 /* MuseDocView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseDocView.swift; sourceTree = "<group>"; };
 		A2FD92AB277970CF00C00F80 /* ShotPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotPlanView.swift; sourceTree = "<group>"; };
 		A2FD92AD2779827E00C00F80 /* LoginViewComps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewComps.swift; sourceTree = "<group>"; };
+		A2FD92AF27799FFE00C00F80 /* LacunchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LacunchManager.swift; sourceTree = "<group>"; };
+		A2FD92B12779F04F00C00F80 /* FindViewModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewModule.swift; sourceTree = "<group>"; };
 		E227FFFA0BCD629747AA9A50 /* Pods-Fantline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fantline.debug.xcconfig"; path = "Target Support Files/Pods-Fantline/Pods-Fantline.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,6 +243,7 @@
 				5A6E054127684B90000BF8A1 /* LibrayView.swift */,
 				5A6E054327684BA1000BF8A1 /* SearchView.swift */,
 				5A6E054527685F23000BF8A1 /* Tabbar.swift */,
+				A2FD92B12779F04F00C00F80 /* FindViewModule.swift */,
 			);
 			path = TabMainViews;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 		5A6E057C276882FF000BF8A1 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				A2FD92AF27799FFE00C00F80 /* LacunchManager.swift */,
 				A2E3747727771FBF006B91AB /* PF_TextField.swift */,
 				5A6E057F2768844B000BF8A1 /* String+.swift */,
 				5A6E057D2768830A000BF8A1 /* PublicFuncs.swift */,
@@ -445,6 +451,8 @@
 				Base,
 			);
 			mainGroup = 5A300B7F274FD0B200587B2C;
+			packageReferences = (
+			);
 			productRefGroup = 5A300B89274FD0B200587B2C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -551,6 +559,8 @@
 			files = (
 				A2D3B42D2778733D0007234C /* LaperDocCard.swift in Sources */,
 				5A6E053227684746000BF8A1 /* AppDelegate.swift in Sources */,
+				A2FD92B22779F04F00C00F80 /* FindViewModule.swift in Sources */,
+				A2FD92B027799FFE00C00F80 /* LacunchManager.swift in Sources */,
 				5A300B95274FD0B300587B2C /* Persistence.swift in Sources */,
 				5A6E054627685F24000BF8A1 /* Tabbar.swift in Sources */,
 				A2E3747627771B89006B91AB /* Buttons.swift in Sources */,
@@ -721,13 +731,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Fantline/Fantline.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"Fantline/Preview Content\"";
 				DEVELOPMENT_TEAM = 6UB6WM6VQR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Fantline/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "拉片Laper";
+				INFOPLIST_KEY_CFBundleDisplayName = "暗房Wisper";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -739,7 +749,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pruefantasy.film;
 				PRODUCT_NAME = "拉片Laper";
 				SUPPORTS_MACCATALYST = YES;
@@ -760,13 +770,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Fantline/Fantline.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"Fantline/Preview Content\"";
 				DEVELOPMENT_TEAM = 6UB6WM6VQR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Fantline/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "拉片Laper";
+				INFOPLIST_KEY_CFBundleDisplayName = "暗房Wisper";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -778,7 +788,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pruefantasy.film;
 				PRODUCT_NAME = "拉片Laper";
 				SUPPORTS_MACCATALYST = YES;
