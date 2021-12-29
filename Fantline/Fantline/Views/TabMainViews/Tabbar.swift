@@ -17,13 +17,11 @@ struct Tabbar: View {
                 Button {
                     uistate.appIndex = tabitem
                 } label: {
-                    Rectangle().hidden()
-                        .overlay(ICON(sysname: tabitem.iconname,fcolor: tabitem == uistate.appIndex ?  .fc1 : .fc2, size: 20))
+                    Rectangle()
+                  .hidden()
+                  .overlay(ICON(sysname: tabitem.iconname,fcolor: tabitem == uistate.appIndex ?  .MainColor : .fc2, size: 20))
                 }
-
-              
             }
-            
             Button {
                 uistate.showAddMenu.toggle()
             } label: {

@@ -25,7 +25,6 @@ struct filmList : View {
                 .padding(.leading,12)
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing:6){
-                    
                     Spacer().frame(width: 6)
                     if let list = list {
                         ForEach(list,id:\.self.id) { film in
@@ -48,18 +47,63 @@ struct filmList : View {
 }
 
 
+struct filmList_comingsoon : View {
+    var title : String
+    var list : [NewMovieDataDetail]?
+    
+    init(title:String,list:[NewMovieDataDetail]?){
+        self.title = title
+        self.list = list
+    }
+    
+    var body: some View{
+        VStack(spacing:12){
+            Text(title)
+                .mFont(style: .Title_17_B,color: .fc1)
+                .PF_Leading()
+                .padding(.leading,12)
+            ScrollView(.horizontal, showsIndicators: false) {
+                LazyHStack(spacing:6){
+                    Spacer().frame(width: 6)
+                    if let list = list {
+                        ForEach(list,id:\.self.id) { film in
+                            filmBanner(url: film.image)
+                                .onTapGesture {
+                                    UIState.shared.showfilmDetailView = true
+//                                    UIState.shared.targetFilm = film
+                                }
+                            }
+                    }
+                  ForEach(0 ..< 4) { index in
+                        filmBanner(url: "")
+                    }
+                Spacer().frame(width: 12)
+                }
+                .frame( height: SW * 0.3 * 1.618)
+            }
+        }
+    }
+}
+
+
+
+
+
 struct filmBanner : View {
     var imagename : String?
     var url : String?
+    var width : CGFloat = SW * 0.3
     
-    public init(imagename: String?){
+    public init(imagename: String?,width : CGFloat = SW * 0.3){
         self.imagename = imagename
         self.url = nil
+        self.width = width
     }
     
-    public init(url: String?){
+    public init(url: String?,width : CGFloat = SW * 0.3){
         self.url = url
         self.imagename = nil
+        self.width = width
     }
     
     var body: some View{
@@ -75,7 +119,7 @@ struct filmBanner : View {
             Image(imagename)
                 .resizable()
                 .scaledToFill()
-                .frame(width: SW * 0.3,height: SW * 0.3 * 1.618)
+                .frame(width: width,height: width * 1.618)
                 .cornerRadius(4)
               
                 .contextMenu {
@@ -94,7 +138,7 @@ struct filmBanner : View {
                     image
                         .resizable()
                         .scaledToFill()
-                        .frame(width: SW * 0.3,height: SW * 0.3 * 1.618)
+                        .frame(width: width,height: width * 1.618)
                         .cornerRadius(4)
                         .contextMenu {
                             Button {
@@ -108,8 +152,9 @@ struct filmBanner : View {
                         }
                 }placeholder: {
                     Color.Card
-                        .frame(width: SW * 0.3,height: SW * 0.3 * 1.618)
+                        .frame(width: width,height: width * 1.618)
                         .cornerRadius(4)
+                        .overlay(ProgressView())
                 }
                  
             } else {

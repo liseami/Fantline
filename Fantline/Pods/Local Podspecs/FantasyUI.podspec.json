@@ -40,11 +40,6 @@
   ],
   "exclude_files": "FantasyUI/Exclude",
   "public_header_files": "FantasyUI/**/*.h",
-  "dependencies": {
-    "SDWebImageSwiftUI": [
-
-    ]
-  },
   "subspecs": [
     {
       "name": "Networking",

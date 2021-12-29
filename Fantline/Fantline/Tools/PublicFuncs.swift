@@ -30,7 +30,7 @@ public func Customappearance() {
     UITextView.appearance().backgroundColor = UIColor(Color.BackGround)
     UITableView.appearance().separatorStyle = .none
     UITableView.appearance().separatorColor = .clear
-    UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = UIColor(Color.accentColor)
+    UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = UIColor(Color.fc1)
     
     //    DispatchQueue.main.async {
     //        //定义屏幕安全区高度

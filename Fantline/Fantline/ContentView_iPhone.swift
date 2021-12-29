@@ -58,6 +58,9 @@ struct ContentView_iPhone: View {
             .PF_Sheet(isPresented: $uistate.showAddMenu, backColor: .clear) {
                 addMenu
             }
+            .PF_Navilink(isPresented: $uistate.showProfileView) {
+                ProfileView()
+            }
 
             
         }
@@ -107,16 +110,6 @@ struct ContentView_iPhone: View {
         Group{
             ToolbarItem(placement: .navigationBarLeading) {
                 Button {
-                    uistate.showLoginView.toggle()
-                } label: {
-                    PF_AsyncImage(UIImage(named: "19"))
-                        .scaledToFill()
-                        .frame(width: 32, height: 32)
-                        .clipShape(Circle())
-                }
-            }
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button {
                     uistate.showSettingView.toggle()
                 } label: {
                     ICON(sysname:"gearshape",fcolor: .fc1){
@@ -124,6 +117,19 @@ struct ContentView_iPhone: View {
                     }
                 }
             }
+            
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    uistate.showProfileView.toggle()
+//                    uistate.showLoginView.toggle()
+                } label: {
+                    PF_AsyncImage(UIImage(named: "19"))
+                        .scaledToFill()
+                        .frame(width: 32, height: 32)
+                        .clipShape(Circle())
+                }
+            }
+        
         }
        
     }

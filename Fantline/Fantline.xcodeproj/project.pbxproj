@@ -53,6 +53,7 @@
 		A286BDA0276DD127008472B6 /* ApiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A286BD9E276DD127008472B6 /* ApiTest.swift */; };
 		A286BDA1276DD127008472B6 /* HTTPConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A286BD9F276DD127008472B6 /* HTTPConfig.swift */; };
 		A286BDAC276EC2B5008472B6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A286BDAB276EC2B5008472B6 /* LoginView.swift */; };
+		A28B3C18277BF3D20046E35E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28B3C17277BF3D20046E35E /* ProfileView.swift */; };
 		A2D3B42227773E350007234C /* UserInfoFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D3B42127773E350007234C /* UserInfoFormView.swift */; };
 		A2D3B42427773FCD0007234C /* FirstCompleteLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D3B42327773FCD0007234C /* FirstCompleteLoginView.swift */; };
 		A2D3B42A277872FC0007234C /* FilmDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D3B429277872FC0007234C /* FilmDetailView.swift */; };
@@ -124,6 +125,7 @@
 		A286BD9E276DD127008472B6 /* ApiTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiTest.swift; sourceTree = "<group>"; };
 		A286BD9F276DD127008472B6 /* HTTPConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPConfig.swift; sourceTree = "<group>"; };
 		A286BDAB276EC2B5008472B6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A28B3C17277BF3D20046E35E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		A2D3B42127773E350007234C /* UserInfoFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoFormView.swift; sourceTree = "<group>"; };
 		A2D3B42327773FCD0007234C /* FirstCompleteLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCompleteLoginView.swift; sourceTree = "<group>"; };
 		A2D3B429277872FC0007234C /* FilmDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailView.swift; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 				A2D3B428277872E90007234C /* FilmViews */,
 				5A6E05812768877F000BF8A1 /* LaperView */,
 				A24FB3202769D71200BC752B /* Floder */,
+				A28B3C17277BF3D20046E35E /* ProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				5A6E0530276846CA000BF8A1 /* Fantline-Bridging-Header.m in Sources */,
 				5A6E05832768878E000BF8A1 /* LaperView.swift in Sources */,
 				A2E3747C277724AB006B91AB /* VerificationCodeView.swift in Sources */,
+				A28B3C18277BF3D20046E35E /* ProfileView.swift in Sources */,
 				5A6E05802768844B000BF8A1 /* String+.swift in Sources */,
 				A2FD92A52779708900C00F80 /* LaperDocView.swift in Sources */,
 				A2E3747827771FBF006B91AB /* PF_TextField.swift in Sources */,
@@ -737,7 +741,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Fantline/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "暗房Wisper";
+				INFOPLIST_KEY_CFBundleDisplayName = "暗房DAO";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -776,7 +780,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Fantline/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "暗房Wisper";
+				INFOPLIST_KEY_CFBundleDisplayName = "暗房DAO";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;

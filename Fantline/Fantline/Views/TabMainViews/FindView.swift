@@ -28,14 +28,18 @@ struct FindView: View {
                     
                     laperDocList
                     
+                    if vm.IMDBComingsoonList.isEmpty{
+                        ProgressView()
+                    }else{
+                        filmList_comingsoon(title: "即将推出", list: vm.IMDBComingsoonList)
+                    }
+                  
+                    
                     if vm.IMDBtop250List.isEmpty{
                         ProgressView()
                     }else{
                         filmList(title: "WisperTop250",list: vm.IMDBtop250List)
                     }
-                    
-                    
-                    filmList(title: "影史经典",list: nil)
                     
                     filmList(title: "Laper名人堂导演", list: nil)
                     
@@ -50,6 +54,7 @@ struct FindView: View {
         .onAppear(perform: {
             guard vm.IMDBtop250List.isEmpty else {return}
             vm.getIMDBtop250List()
+            vm.getComingSoonList()
         })
         .PF_Navitop(style: offset < -10 ? .large : .none) {
             BlurView()

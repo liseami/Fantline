@@ -11,15 +11,15 @@ import FantasyUI
 
 struct Top250DataDetail : Convertible,Decodable{
     
-         var    id:  String = ""
-         var    rank:  String = ""
-         var    title:  String = ""
-         var    fullTitle:  String = ""
-         var    year:  String = ""
-         var    image:  String = ""
-         var    crew:  String = ""
-         var    imDbRating:  String = ""
-         var    imDbRatingCount:  String = ""
+    var    id:  String = ""
+    var    rank:  String = ""
+    var    title:  String = ""
+    var    fullTitle:  String = ""
+    var    year:  String = ""
+    var    image:  String = ""
+    var    crew:  String = ""
+    var    imDbRating:  String = ""
+    var    imDbRatingCount:  String = ""
 }
 
 struct Top250Data : Convertible,Decodable{
@@ -27,14 +27,44 @@ struct Top250Data : Convertible,Decodable{
     var errorMessage : String = ""
 }
 
-//api
+struct NewMovieData : Convertible,Decodable{
+    var items : [NewMovieDataDetail] = []
+    var errorMessage : String = ""
+}
+
+struct NewMovieDataDetail : Convertible,Decodable{
+    var  id : String = ""
+    var  title : String = ""
+    var  fullTitle : String = ""
+    var  year : String = ""
+    var  releaseState : String = ""
+    var  image : String = ""
+    var  runtimeMins : String = ""
+    var  runtimeStr : String = ""
+    var  plot : String = ""
+    var  contentRating : String = ""
+    var  imDbRating : String = ""
+    var  imDbRatingCount : String = ""
+    var  metacriticRating : String = ""
+    var  genres : String = ""
+    var  directors : String = ""
+    var  stars : String = ""
+}
+
 
 //Api
 enum IMDB_API : ApiType {
     case IMDBtop250List
+    case ComingSoonList
     
     var path: String {
-        "en/API/Top250Movies/k_cv8oq4xk"
+        switch self {
+        case .IMDBtop250List:
+            return "en/API/Top250Movies/k_cv8oq4xk"
+        case .ComingSoonList:
+            return "en/API/ComingSoon/k_cv8oq4xk"
+        }
+        
     }
     
     var method: HTTPRequestMethod {
@@ -51,33 +81,30 @@ enum IMDB_API : ApiType {
 class FindViewModule : ObservableObject{
     static let shared = FindViewModule()
     @Published var IMDBtop250List : [Top250DataDetail] = []
+    @Published var IMDBHost: [Top250DataDetail] = []
+    @Published var IMDBComingsoonList : [NewMovieDataDetail] = []
     
     func getIMDBtop250List(){
         let target = IMDB_API.IMDBtop250List
-
-//        Networking.requestObject(target, modeType: Top250Data.self) { r, m  in
-//            print(m?.items.count)
-//            if m == nil {
-//                print("🐯")
-//            }
-//            print("大熊猫")
-//            self.IMDBtop250List = m?.items ?? []
-//        }
-//
-//        Networking.requestObject(target, modeType: Top250Data.self) { r, m  in
-//            self.IMDBtop250List = m?.items ?? []
-//            print(r.dataJson)
-//            print("🐘")
-//        }
         
         Networking.request(target) { result in
             if let json = result.rawReponse?.data{
-                print( result.json)
                 let decoder = JSONDecoder()
                 let product = try! decoder.decode(Top250Data.self, from: json)
                 print(product.items.count)
                 self.IMDBtop250List = product.items
             }
+        }
+    }
+    
+    func getComingSoonList(){
+        let target = IMDB_API.ComingSoonList
+        Networking.request(target) { result in
+            if let json = result.rawReponse?.data{
+                let data = try! JSONDecoder().decode(NewMovieData.self, from: json)
+                self.IMDBComingsoonList = data.items
+            }
+           
         }
     }
     

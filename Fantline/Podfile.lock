@@ -18,6 +18,11 @@ PODS:
     - Moya/Core
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
+  - SDWebImage (5.12.1):
+    - SDWebImage/Core (= 5.12.1)
+  - SDWebImage/Core (5.12.1)
+  - SDWebImageSwiftUI (2.0.2):
+    - SDWebImage (~> 5.10)
   - SwiftyJSON (5.0.1)
   - UMCCommonLog (2.0.2)
   - UMCommon (7.3.5):
@@ -30,6 +35,7 @@ DEPENDENCIES:
   - FloatingPanel
   - Introspect
   - lottie-ios
+  - SDWebImageSwiftUI
   - UMCCommonLog
   - UMCommon
   - UMDevice
@@ -43,6 +49,8 @@ SPEC REPOS:
     - KakaJSON
     - lottie-ios
     - Moya
+    - SDWebImage
+    - SDWebImageSwiftUI
     - SwiftyJSON
     - UMCCommonLog
     - UMCommon
@@ -61,11 +69,13 @@ SPEC CHECKSUMS:
   KakaJSON: cc5ff50a8c1cfbb09413db8496cb709a209e6137
   lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
+  SDWebImageSwiftUI: 8a3923c95108312b03a599ec1498754af55a6819
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   UMCCommonLog: bea707e50c85cef4b0eb47cc5c7226bb843245ca
   UMCommon: ab4d875ddefe1b06c60b577e4a58bc4d433ee067
   UMDevice: 04948a92184e8d25f1369b635dff5490c1f063e0
 
-PODFILE CHECKSUM: cab1b4c61c9b036cb457eaf1f4ccdd29d6fda31f
+PODFILE CHECKSUM: 0d6ac10bf9081d0e12ffd8e9b059fe685b9ca278
 
 COCOAPODS: 1.11.2

@@ -50,6 +50,7 @@ class UIState : ObservableObject{
     
     @Published var showAddMenu : Bool = false
     
+    @Published var showProfileView : Bool = false
     @Published var showLibraySubView : Bool = false
     enum LibraySubviewName {
         case FilmList
@@ -64,7 +65,11 @@ class UIState : ObservableObject{
     }
     
     
-    @Published var targetFilm : Top250DataDetail = Top250DataDetail(id: "1", rank: "1", title: "碧海蓝天", fullTitle: "《碧海蓝天》", year: "1993", image: "dii", crew: "Frank Darabont (dir.), Tim Robbins, Morgan Freeman", imDbRating: "9.2", imDbRatingCount: "2512082")
+    @Published var targetFilm : Top250DataDetail = Top250DataDetail(id: "1", rank: "1", title: "碧海蓝天", fullTitle: "《碧海蓝天》", year: "1993",
+                                                                    image:"https://m.media-amazon.com/images/M/MV5BMGM4M2Q5N2MtNThkZS00NTc1LTk1NTItNWEyZjJjNDRmNDk5XkEyXkFqcGdeQXVyMjA0MDQ0Mjc@._V1_UX128_CR0,3,128,176_AL_.jpg",
+                                                                    crew: "Frank Darabont (dir.), Tim Robbins, Morgan Freeman",
+                                                                    imDbRating: "9.2",
+                                                                    imDbRatingCount: "2512082")
     
     enum FilmListStyle {
         case block ,list
@@ -93,5 +98,6 @@ class UIState : ObservableObject{
         }
     }
     
+    @Published var filmDetailColor : Color = .fc2
     
 }
