@@ -54,8 +54,6 @@ func randomString(_ length: Int?) -> String {
     else{
         return String((0..<randomLengthInt ).map{ _ in letters.randomElement()! })
     }
-    
-    
 }
 
 

@@ -54,6 +54,7 @@
 		A286BDA1276DD127008472B6 /* HTTPConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A286BD9F276DD127008472B6 /* HTTPConfig.swift */; };
 		A286BDAC276EC2B5008472B6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A286BDAB276EC2B5008472B6 /* LoginView.swift */; };
 		A28B3C18277BF3D20046E35E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28B3C17277BF3D20046E35E /* ProfileView.swift */; };
+		A28B3C1A277C3A230046E35E /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28B3C19277C3A230046E35E /* PlayerView.swift */; };
 		A2D3B42227773E350007234C /* UserInfoFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D3B42127773E350007234C /* UserInfoFormView.swift */; };
 		A2D3B42427773FCD0007234C /* FirstCompleteLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D3B42327773FCD0007234C /* FirstCompleteLoginView.swift */; };
 		A2D3B42A277872FC0007234C /* FilmDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D3B429277872FC0007234C /* FilmDetailView.swift */; };
@@ -126,6 +127,7 @@
 		A286BD9F276DD127008472B6 /* HTTPConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPConfig.swift; sourceTree = "<group>"; };
 		A286BDAB276EC2B5008472B6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A28B3C17277BF3D20046E35E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		A28B3C19277C3A230046E35E /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		A2D3B42127773E350007234C /* UserInfoFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoFormView.swift; sourceTree = "<group>"; };
 		A2D3B42327773FCD0007234C /* FirstCompleteLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCompleteLoginView.swift; sourceTree = "<group>"; };
 		A2D3B429277872FC0007234C /* FilmDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailView.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 		5A6E05812768877F000BF8A1 /* LaperView */ = {
 			isa = PBXGroup;
 			children = (
+				A28B3C19277C3A230046E35E /* PlayerView.swift */,
 				5A6E05822768878E000BF8A1 /* LaperView.swift */,
 				5A6E058427688B91000BF8A1 /* PieChart.swift */,
 				A2D3B42C2778733D0007234C /* LaperDocCard.swift */,
@@ -578,6 +581,7 @@
 				A2D3B42427773FCD0007234C /* FirstCompleteLoginView.swift in Sources */,
 				5A6E058527688B91000BF8A1 /* PieChart.swift in Sources */,
 				5A6E0530276846CA000BF8A1 /* Fantline-Bridging-Header.m in Sources */,
+				A28B3C1A277C3A230046E35E /* PlayerView.swift in Sources */,
 				5A6E05832768878E000BF8A1 /* LaperView.swift in Sources */,
 				A2E3747C277724AB006B91AB /* VerificationCodeView.swift in Sources */,
 				A28B3C18277BF3D20046E35E /* ProfileView.swift in Sources */,
@@ -741,7 +745,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Fantline/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "暗房DAO";
+				INFOPLIST_KEY_CFBundleDisplayName = "拉片Laper";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -753,7 +757,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.6;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pruefantasy.film;
 				PRODUCT_NAME = "拉片Laper";
 				SUPPORTS_MACCATALYST = YES;
@@ -780,7 +784,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Fantline/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "暗房DAO";
+				INFOPLIST_KEY_CFBundleDisplayName = "拉片Laper";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -792,7 +796,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.6;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pruefantasy.film;
 				PRODUCT_NAME = "拉片Laper";
 				SUPPORTS_MACCATALYST = YES;

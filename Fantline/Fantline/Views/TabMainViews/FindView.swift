@@ -17,37 +17,39 @@ struct FindView: View {
         
         ZStack{
            
-            LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.3), Color.BackGround]), startPoint: .topLeading, endPoint: .bottom)
-                .frame( height: SH * 0.3)
+            Color.BackGround.ignoresSafeArea()
+            
+            
+            Rectangle()
+                .frame(width: SW , height: SW * 0.34)
+                .foregroundColor(.init(hex: "7FC8F6"))
                 .MoveTo(.topCenter)
                 .ignoresSafeArea()
-//            
+                .offset(x: 0, y: -SW * 0.5)
+                .rotationEffect(Angle(degrees: -30), anchor: .center)
+                .blur(radius: 99)
+            
             PF_OffsetScrollView(offset: $offset) {
-                
+
                 LazyVStack(alignment: .center, spacing: 18, pinnedViews: .sectionFooters){
-                    
+
                     laperDocList
+
+                
+                    filmList_comingsoon(title: "即将推出", list: vm.IMDBComingsoonList)
                     
-                    if vm.IMDBComingsoonList.isEmpty{
-                        ProgressView()
-                    }else{
-                        filmList_comingsoon(title: "即将推出", list: vm.IMDBComingsoonList)
-                    }
                   
+                    filmList(title: "WisperTop250",list: vm.IMDBtop250List)
                     
-                    if vm.IMDBtop250List.isEmpty{
-                        ProgressView()
-                    }else{
-                        filmList(title: "WisperTop250",list: vm.IMDBtop250List)
-                    }
-                    
-                    filmList(title: "Laper名人堂导演", list: nil)
-                    
-                    filmList(title: "Laper名人堂演员",list: nil)
+
+                    filmList(title: "Laper名人堂导演", list: [])
+
+                    filmList(title: "Laper名人堂演员",list: [])
                 }
                 .padding(.top,32)
             }
-            
+         
+//
          
             
         }

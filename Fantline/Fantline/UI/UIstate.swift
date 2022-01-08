@@ -50,6 +50,7 @@ class UIState : ObservableObject{
     
     @Published var showAddMenu : Bool = false
     
+    @Published var TabbarProgress : Double = 0.618
     @Published var showProfileView : Bool = false
     @Published var showLibraySubView : Bool = false
     enum LibraySubviewName {
@@ -63,7 +64,7 @@ class UIState : ObservableObject{
         self.showLibraySubViewEnum = pageCase
         self.showLibraySubView = true
     }
-    
+    @Published var showPlayerView : Bool = false
     
     @Published var targetFilm : Top250DataDetail = Top250DataDetail(id: "1", rank: "1", title: "碧海蓝天", fullTitle: "《碧海蓝天》", year: "1993",
                                                                     image:"https://m.media-amazon.com/images/M/MV5BMGM4M2Q5N2MtNThkZS00NTc1LTk1NTItNWEyZjJjNDRmNDk5XkEyXkFqcGdeQXVyMjA0MDQ0Mjc@._V1_UX128_CR0,3,128,176_AL_.jpg",

@@ -40,7 +40,6 @@ struct ProfileView: View {
                         
                         Text("Over Liseami")
                             .mFont(style: .LargeTitle_22_B,color: .fc1)
-                        
                         Text("修改资料")
                             .mFont(style: .Body_15_B,color: .fc1)
                             .padding(.horizontal,32)
@@ -51,12 +50,18 @@ struct ProfileView: View {
                   
                     
                     
-                    HStack(spacing:SW * 0.16){
+                    HStack(spacing:SW * 0.12){
                         
                         VStack{
                             Text("2")
                                 .mFont(style: .Body_13_B,color: .fc1)
                             Text("片单")
+                        }
+                        
+                        VStack{
+                            Text("0")
+                                .mFont(style: .Body_13_B,color: .fc1)
+                            Text("拉片")
                         }
                         
                         VStack{
@@ -75,9 +80,14 @@ struct ProfileView: View {
                     .mFont(style: .Body_15_R,color: .fc2)
                     
                     
-                    Text("公开片单")
-                        .mFont(style: .Title_17_B,color: .fc1)
-                        .PF_Leading()
+                    HStack{
+                        Text("公开片单")
+                            .mFont(style: .Title_17_B,color: .fc1)
+                        Text("拉片文档")
+                            .mFont(style: .Title_17_B,color: .fc2)
+                            .PF_Leading()
+                    }
+                 
                     
                     FilmListFloder(text: "豪华片单", imagename: "23", style: .list) {
                         

@@ -40,6 +40,11 @@
   ],
   "exclude_files": "FantasyUI/Exclude",
   "public_header_files": "FantasyUI/**/*.h",
+  "dependencies": {
+    "lottie-ios": [
+
+    ]
+  },
   "subspecs": [
     {
       "name": "Networking",

@@ -28,6 +28,7 @@ struct LaperDocCard : View {
                     .padding(.all,12)
         }
         .frame(width: SW * 0.93)
+        .background(Color.Card)
         .cornerRadius(4)
         .overlay(RoundedRectangle(cornerRadius: 4, style: .continuous).stroke(lineWidth: 0.5).foregroundColor(.fc3.opacity(0.6)))
     }

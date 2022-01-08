@@ -23,7 +23,7 @@ struct Tabbar: View {
                 }
             }
             Button {
-                uistate.showAddMenu.toggle()
+                uistate.showLaperView.toggle()
             } label: {
                 Rectangle()
                     .hidden()
@@ -33,6 +33,7 @@ struct Tabbar: View {
         }
         .frame( height: 44, alignment: .center)
         .overlay(Divider().opacity(0.3),alignment: .top)
+        .overlay(ProgressView.init(value:uistate.TabbarProgress ).progressViewStyle(LinearProgressViewStyle(tint: Color.MainColor)).frame(height: 0.5),alignment: .top)
         .background(Color.Card.ignoresSafeArea())
         .MoveTo(.bottomCenter)
     

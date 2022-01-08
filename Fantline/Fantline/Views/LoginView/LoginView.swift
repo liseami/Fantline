@@ -17,6 +17,7 @@ struct LoginView: View {
     @State private var text : String = ""
     @State private var focus : Bool = true
     
+    
     var body: some View {
         
         NavigationView {
@@ -38,6 +39,7 @@ struct LoginView: View {
                         $0.tintColor = UIColor(Color.fc1)
                         $0.keyboardType = .numberPad
                         $0.setValue(UIColor(Color.fc2 ), forKeyPath: "placeholderLabel.textColor")
+                        
                     }
                     .frame( height: GoldenH)
 

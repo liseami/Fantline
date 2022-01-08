@@ -48,7 +48,7 @@ struct FilmListFloder : View {
                     Image(imagename)
                         .resizable()
                         .scaledToFill()
-                        .frame(width: GoldenH * 1.618, height: GoldenH * 1.618,alignment: .top)
+                        .frame(width: GoldenH, height: GoldenH,alignment: .top)
                         .clipShape(RoundedRectangle(cornerRadius: 4, style: .continuous))
                     VStack(alignment: .leading,  spacing:4){
                         Text(text)

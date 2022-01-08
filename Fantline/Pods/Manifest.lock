@@ -3,8 +3,10 @@ PODS:
   - CropViewController (2.6.0)
   - FantasyUI (1.0.11):
     - FantasyUI/Networking (= 1.0.11)
+    - lottie-ios
   - FantasyUI/Networking (1.0.11):
     - KakaJSON
+    - lottie-ios
     - Moya
     - Moya/Combine (~> 15.0)
     - SwiftyJSON
@@ -63,7 +65,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   CropViewController: 7093b39ec3cb508531b22d35773e06cecd7378d8
-  FantasyUI: 28d531429def8f046f732bc1bd2695b1507fe46d
+  FantasyUI: a4abebeca31db273700d872832e22334c3075cf2
   FloatingPanel: 523cb50f490f151fc03fabf24a8322e44d22f65f
   Introspect: 2be020f30f084ada52bb4387fff83fa52c5c400e
   KakaJSON: cc5ff50a8c1cfbb09413db8496cb709a209e6137

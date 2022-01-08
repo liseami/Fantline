@@ -10,9 +10,9 @@ import SwiftUI
 
 struct filmList : View {
     var title : String
-    var list : [Top250DataDetail]?
+    var list : [Top250DataDetail]
     
-    init(title:String,list:[Top250DataDetail]?){
+    init(title:String,list:[Top250DataDetail]){
         self.title = title
         self.list = list
     }
@@ -26,7 +26,7 @@ struct filmList : View {
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing:6){
                     Spacer().frame(width: 6)
-                    if let list = list {
+                    if  !list.isEmpty  {
                         ForEach(list,id:\.self.id) { film in
                             filmBanner(url: film.image)
                                 .onTapGesture {
@@ -34,9 +34,10 @@ struct filmList : View {
                                     UIState.shared.targetFilm = film
                                 }
                             }
-                    }
-                  ForEach(0 ..< 4) { index in
-                        filmBanner(url: "")
+                    }else{
+                        ForEach(0 ..< 4) { index in
+                              filmBanner(url: "")
+                          }
                     }
                 Spacer().frame(width: 12)
                 }
@@ -49,14 +50,16 @@ struct filmList : View {
 
 struct filmList_comingsoon : View {
     var title : String
-    var list : [NewMovieDataDetail]?
+    var list : [NewMovieDataDetail]
     
-    init(title:String,list:[NewMovieDataDetail]?){
+    init(title:String,list:[NewMovieDataDetail]){
         self.title = title
         self.list = list
     }
     
     var body: some View{
+        
+        
         VStack(spacing:12){
             Text(title)
                 .mFont(style: .Title_17_B,color: .fc1)
@@ -65,7 +68,7 @@ struct filmList_comingsoon : View {
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing:6){
                     Spacer().frame(width: 6)
-                    if let list = list {
+                    if  !list.isEmpty  {
                         ForEach(list,id:\.self.id) { film in
                             filmBanner(url: film.image)
                                 .onTapGesture {
@@ -73,9 +76,10 @@ struct filmList_comingsoon : View {
 //                                    UIState.shared.targetFilm = film
                                 }
                             }
-                    }
-                  ForEach(0 ..< 4) { index in
-                        filmBanner(url: "")
+                    }else{
+                        ForEach(0 ..< 4) { index in
+                              filmBanner(url: "")
+                          }
                     }
                 Spacer().frame(width: 12)
                 }
@@ -173,8 +177,8 @@ struct filmComps_Previews: PreviewProvider {
         filmBanner(url: "https://m.media-amazon.com/images/M/MV5BM2RiZDVjYWEtZGNhYy00ZGU0LTgwZjMtZTJmNmMyNGQ5NGYyXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_UX128_CR0,3,128,176_AL_.jpg")
             .previewLayout(.sizeThatFits)
         VStack{
-            filmList(title: "Exmple", list: nil)
-            filmList(title: "Exmple", list: nil)
+            filmList(title: "Exmple", list: [])
+            filmList(title: "Exmple", list: [])
             Spacer()
             filmBanner(imagename: "3")
        

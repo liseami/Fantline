@@ -40,10 +40,9 @@ struct ContentView_iPhone: View {
                 
             }
             .toolbar(content: {MainToolBar})
-            .PF_FullScreen(isPresented: $uistate.showLaperView,
-                           onDismiss: {},
-                           content: {LaperView()}
-            )
+            .PF_Navilink(isPresented: $uistate.showLaperView, content: {
+                LaperView()
+            })
             .PF_FullScreen(isPresented: $uistate.showLoginView) {
             } content: {
                 LoginView()
@@ -66,6 +65,7 @@ struct ContentView_iPhone: View {
         }
         .accentColor(.accentColor)
         .navigationViewStyle(.stack)
+        .PF_OverProgressView(loadingState: .none)
     
    
       
